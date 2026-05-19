@@ -1,54 +1,43 @@
-# Sistema de Diseño — Tokens Base (Airbnb Edition v3.2)
+# Design System — [Nombre de marca]
 
-> Este núcleo ha sido actualizado para seguir el lenguaje visual de Airbnb: minimalista, basado en fotografía y con el acento "Rausch".
+> ⚠️ **Plantilla.** Reemplazá los placeholders con los tokens reales.
 
----
+## Colores
 
-## 1. Colores
-
-### Paleta Base (Neutrales)
 | Token | Valor | Uso |
 |-------|-------|-----|
-| `--color-white` | `#FFFFFF` | Fondo principal (Canvas) |
-| `--color-gray-50` | `#F7F7F7` | Fondo secundario (Surface Soft) |
-| `--color-gray-100` | `#EBEBEB` | Bordes suaves (Hairline Soft) |
-| `--color-gray-200` | `#DDDDDD` | Bordes estándar (Hairline) |
-| `--color-gray-800` | `#222222` | Texto principal (Ink) |
-| `--color-gray-900` | `#000000` | Scrim / Sombras |
+| `--color-bg`         | #FFFFFF | Fondo base |
+| `--color-text`       | #1A1A1A | Texto principal |
+| `--color-text-soft`  | #5C5C5C | Texto secundario |
+| `--color-primary`    | #0E7C66 | Acción primaria |
+| `--color-primary-hi` | #0A5D4D | Hover primaria |
+| `--color-accent`     | #C04A2F | Énfasis / errores destacados |
+| `--color-success`    | #2A8E5C | Estado success |
+| `--color-warn`       | #C77800 | Estado warning |
+| `--color-danger`     | #B53636 | Estado error |
+| `--color-border`     | #D9DEE0 | Bordes neutros |
 
-### Paleta de Acento (Airbnb Style)
-| Token | Valor | Uso |
-|-------|-------|-----|
-| `--color-primary` | `#FF385C` | Rausch: Acciones principales, Search Orb |
-| `--color-primary-hover` | `#E00B41` | Rausch Active |
-| `--color-primary-light` | `#FFD1DA` | Rausch Disabled |
-| `--color-secondary` | `#222222` | Ink: Acciones secundarias |
+## Tipografía
 
----
-
-## 2. Tipografía
-Se utiliza **Inter** como sustituto de Airbnb Cereal.
-
-| Token | Tamaño | Peso | Uso |
-|-------|--------|------|-----|
-| `--text-xl` | `1.375rem` (22px) | 500 | Display Titles (Airbnb LG) |
-| `--text-lg` | `1rem` (16px) | 600 | Card Titles |
-| `--text-base` | `1rem` (16px) | 400 | Body Text |
-| `--text-sm` | `0.875rem` (14px) | 400 | Meta Text |
-
----
-
-## 3. Espaciado y Formas
-
-### Redondeo (Rounded)
-| Token | Valor | Uso |
-|-------|-------|-----|
-| `--radius-sm` | `8px` | Botones (Airbnb SM) |
-| `--radius-md` | `14px` | Cards (Airbnb MD) |
-| `--radius-lg` | `20px` | Modales / Detail cards |
-| `--radius-full` | `9999px` | Search Bar / Search Orb |
-
-### Sombras (Elevation)
 | Token | Valor |
 |-------|-------|
-| `--shadow-card` | `rgba(0,0,0,0.02) 0 0 0 1px, rgba(0,0,0,0.04) 0 2px 6px 0, rgba(0,0,0,0.1) 0 4px 8px 0` |
+| `--font-sans` | "Inter", system-ui, sans-serif |
+| `--font-mono` | "JetBrains Mono", monospace |
+
+### Escala
+- `--fs-12` 12px / 16 lh — caption
+- `--fs-14` 14px / 20 lh — body sm
+- `--fs-16` 16px / 24 lh — body
+- `--fs-20` 20px / 28 lh — h3
+- `--fs-28` 28px / 36 lh — h2
+- `--fs-40` 40px / 48 lh — h1
+
+## Espaciado (escala 4)
+`--sp-1`=4px · `--sp-2`=8 · `--sp-3`=12 · `--sp-4`=16 · `--sp-6`=24 · `--sp-8`=32 · `--sp-12`=48
+
+## Radios
+`--r-sm`=4px · `--r-md`=8 · `--r-lg`=16 · `--r-full`=999
+
+## Sombras
+- `--sh-1` 0 1px 2px rgba(0,0,0,.08)
+- `--sh-2` 0 4px 12px rgba(0,0,0,.10)
