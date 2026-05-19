@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sereno Yoga</title>
+  
+  <!-- SEO Test 08 -->
+  <meta name="description" content="Descubrí el estudio Sereno Yoga más cercano, consultá horarios de clases disponibles esta semana y reservá tu lugar sin necesidad de crear una cuenta. Práctica cotidiana sin misticismo.">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  
+  <!-- OG / Twitter Cards -->
+  <meta property="og:title" content="Sereno Yoga — Reserva tu clase hoy">
+  <meta property="og:description" content="Práctica cotidiana sin misticismo. Encontrá tu estudio y reservá en menos de 90 segundos.">
+  <meta property="og:image" content="assets/og-image.jpg">
+  <meta property="og:url" content="https://serenoyoga.com">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <main>
+    <!-- HeroSection -->
+    <section id="HeroSection" data-state="idle">
+      <div class="state-idle">
+        <h1 class="heading"></h1>
+        <p class="body"></p>
+        <button type="button" class="cta cta-primary"></button>
+      </div>
+    </section>
+
+    <!-- LocationFinder -->
+    <section id="LocationFinder" data-state="idle">
+      <div class="state-idle">
+        <h2 class="heading"></h2>
+        <p class="body"></p>
+        <button type="button" class="cta cta-primary" id="btn-find-location"></button>
+      </div>
+      <div class="state-loading">
+        <div class="spinner"></div>
+        <p class="label"></p>
+      </div>
+      <div class="state-empty">
+        <h2 class="heading"></h2>
+        <p class="body"></p>
+        <button type="button" class="cta cta-secondary"></button>
+      </div>
+      <div class="state-error">
+        <h2 class="heading"></h2>
+        <p class="body"></p>
+        <button type="button" class="cta cta-secondary" id="btn-retry-location"></button>
+      </div>
+      <div class="state-success">
+        <p class="toast"></p>
+      </div>
+    </section>
+
+    <!-- ClassSchedule -->
+    <section id="ClassSchedule" data-state="idle">
+      <div class="state-idle">
+        <h2 class="heading"></h2>
+        <p class="body"></p>
+        <button type="button" class="cta cta-primary" id="btn-book-class"></button>
+      </div>
+      <div class="state-loading">
+        <div class="spinner"></div>
+        <p class="label"></p>
+      </div>
+      <div class="state-empty">
+        <h2 class="heading"></h2>
+        <p class="body"></p>
+        <button type="button" class="cta cta-secondary"></button>
+      </div>
+      <div class="state-error">
+        <h2 class="heading"></h2>
+        <p class="body"></p>
+        <button type="button" class="cta cta-secondary" id="btn-retry-schedule"></button>
+      </div>
+      <div class="state-success">
+        <p class="toast"></p>
+      </div>
+    </section>
+
+    <!-- BookingForm -->
+    <section id="BookingForm" data-state="idle">
+      <div class="state-idle">
+        <h2 class="heading"></h2>
+        <p class="body"></p>
+        <form id="form-booking">
+          <input type="text" placeholder="Tu nombre" required>
+          <div class="form-group">
+            <input type="email" placeholder="Tu correo" required>
+            <p class="emailDisclaimer">
+              <!-- TODO:WRITER BookingForm.emailDisclaimer -->
+            </p>
+          </div>
+          <button type="submit" class="cta cta-primary"></button>
+        </form>
+      </div>
+      <div class="state-loading">
+        <div class="spinner"></div>
+        <p class="label"></p>
+      </div>
+      <div class="state-error">
+        <h2 class="heading"></h2>
+        <p class="body"></p>
+        <button type="button" class="cta cta-secondary" id="btn-retry-booking"></button>
+      </div>
+      <div class="state-success">
+        <p class="toast"></p>
+      </div>
+    </section>
+
+    <!-- TestimonialList -->
+    <section id="TestimonialList" data-state="idle">
+      <div class="state-idle">
+        <h2 class="heading"></h2>
+        <p class="body"></p>
+      </div>
+      <div class="state-loading">
+        <div class="spinner"></div>
+        <p class="label"></p>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="FAQ" data-state="idle">
+      <div class="state-idle">
+        <h2 class="heading"></h2>
+        <p class="body"></p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer id="Footer" data-state="idle">
+    <div class="state-idle">
+      <h2 class="heading"></h2>
+      <p class="body"></p>
+      <div class="footer-links">
+        <button type="button" class="cta cta-text"></button>
+        <a href="privacy.html" class="privacyLink">
+          <!-- TODO:WRITER Footer.privacyLink -->
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Cookie Banner Test 12 -->
+  <div id="CookieBanner" class="cookie-banner hidden" data-state="idle" role="alert">
+    <div class="state-idle banner-content">
+      <p class="text">
+        <!-- TODO:WRITER CookieBanner.text -->
+      </p>
+      <div class="banner-actions">
+        <button type="button" id="btn-reject-cookies" class="cta cta-secondary reject">
+          <!-- TODO:WRITER CookieBanner.reject -->
+        </button>
+        <button type="button" id="btn-accept-cookies" class="cta cta-primary accept">
+          <!-- TODO:WRITER CookieBanner.accept -->
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

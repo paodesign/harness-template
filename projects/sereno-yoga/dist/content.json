@@ -1,0 +1,132 @@
+{
+  "$schema_version": "1.0",
+  "language": "es-AR",
+  "components": {
+    "HeroSection": {
+      "idle": {
+        "heading": "Yoga cerca tuyo, sin complicaciones",
+        "body": "Tu práctica diaria en estudios urbanos. Sin postureo ni misticismo, solo vos y tu respiración.",
+        "cta": "Ver clases hoy"
+      },
+      "loading": { "_not_applicable": "Renderizado inicial estático" },
+      "empty": { "_not_applicable": "Contenido estático del landing" },
+      "error": { "_not_applicable": "Contenido estático del landing" },
+      "success": { "_not_applicable": "Sin acción de envío" }
+    },
+    "LocationFinder": {
+      "idle": {
+        "heading": "Encontrá tu estudio",
+        "body": "Ingresá tu zona para ver los horarios más cercanos a tu casa o trabajo.",
+        "cta": "Buscar ahora"
+      },
+      "loading": {
+        "label": "Buscando estudios…"
+      },
+      "empty": {
+        "heading": "No hay estudios cerca",
+        "body": "Todavía no llegamos a tu zona. Dejanos tu barrio y te avisamos cuando abramos uno.",
+        "cta": "Avisarme"
+      },
+      "error": {
+        "heading": "No pudimos buscar",
+        "body": "Hubo un problema al conectar con el mapa. Probá de nuevo en unos minutos.",
+        "cta": "Reintentar"
+      },
+      "success": {
+        "toast": "Ubicación detectada con éxito."
+      }
+    },
+    "ClassSchedule": {
+      "idle": {
+        "heading": "Clases de esta semana",
+        "body": "Elegí el horario que mejor te quede. Todas las clases son aptas para todos los niveles.",
+        "cta": "Reservar lugar"
+      },
+      "loading": {
+        "label": "Cargando horarios…"
+      },
+      "empty": {
+        "heading": "Sin clases disponibles",
+        "body": "No hay clases programadas para lo que queda del día. Mirá los horarios de mañana.",
+        "cta": "Ver mañana"
+      },
+      "error": {
+        "heading": "Error al cargar clases",
+        "body": "No pudimos obtener la grilla de horarios. Por favor, refrescá la página.",
+        "cta": "Refrescar"
+      },
+      "success": {
+        "toast": "Horario seleccionado correctamente."
+      }
+    },
+    "BookingForm": {
+      "idle": {
+        "heading": "Reservá tu lugar",
+        "body": "Completá tus datos para asegurar tu espacio. No necesitás pagar ahora.",
+        "cta": "Confirmar reserva",
+        "emailDisclaimer": "Usamos tu email solo para confirmar tu reserva. Conocé más en nuestra política de privacidad."
+      },
+      "loading": {
+        "label": "Confirmando reserva…"
+      },
+      "empty": { "_not_applicable": "Formulario de ingreso de datos" },
+      "error": {
+        "heading": "No pudimos reservar",
+        "body": "Tu reserva no se pudo procesar. Verificá tu conexión o intentá más tarde.",
+        "cta": "Reintentar"
+      },
+      "success": {
+        "toast": "Listo, te esperamos el martes."
+      }
+    },
+    "TestimonialList": {
+      "idle": {
+        "heading": "Experiencias reales",
+        "body": "Lo que dicen quienes ya practican con nosotros.",
+        "cta": ""
+      },
+      "loading": {
+        "label": "Cargando reseñas…"
+      },
+      "empty": { "_not_applicable": "Sección informativa fija" },
+      "error": { "_not_applicable": "Falla silenciosa no bloqueante" },
+      "success": { "_not_applicable": "Sin acción de envío" }
+    },
+    "FAQ": {
+      "idle": {
+        "heading": "Dudas frecuentes",
+        "body": "Todo lo que necesitás saber antes de tu primera clase.",
+        "cta": ""
+      },
+      "loading": { "_not_applicable": "Contenido estático" },
+      "empty": { "_not_applicable": "Contenido estático" },
+      "error": { "_not_applicable": "Contenido estático" },
+      "success": { "_not_applicable": "Sin acción de envío" }
+    },
+    "Footer": {
+      "idle": {
+        "heading": "Sereno Yoga",
+        "body": "Práctica cotidiana, mente tranquila. Estudios en CABA y GBA.",
+        "cta": "Contacto",
+        "privacyLink": "Política de privacidad"
+      },
+      "loading": { "_not_applicable": "Componente estático" },
+      "empty": { "_not_applicable": "Componente estático" },
+      "error": { "_not_applicable": "Componente estático" },
+      "success": { "_not_applicable": "Sin acción de envío" }
+    },
+    "CookieBanner": {
+      "idle": {
+        "text": "Usamos cookies para recordar tu ubicación y mejorar el proceso de reserva. Podés aceptar o rechazar las cookies no esenciales.",
+        "accept": "Aceptar cookies",
+        "reject": "Rechazar cookies"
+      },
+      "loading": { "_not_applicable": "Componente instantáneo" },
+      "empty": { "_not_applicable": "Componente instantáneo" },
+      "error": { "_not_applicable": "Componente instantáneo" },
+      "success": { "_not_applicable": "Componente instantáneo" }
+    }
+  },
+  "_notes": "Contenido ampliado con marcos legales y consentimiento. Sin exclamaciones, tono sereno."
+}
+

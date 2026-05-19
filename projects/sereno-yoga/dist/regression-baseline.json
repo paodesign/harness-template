@@ -1,0 +1,19 @@
+{
+  "project": "sereno-yoga",
+  "baseline_cycle": 1,
+  "timestamp": "2026-05-13T11:53:29Z",
+  "passed_tests": [
+    "01_context_integrity",
+    "02_semantic_validation",
+    "03_visual_consistency",
+    "04_responsiveness",
+    "05_accessibility",
+    "06_navigation_flow",
+    "07_performance",
+    "08_seo_metadata",
+    "09_maps",
+    "11_state_coverage",
+    "12_privacy_consent",
+    "14_accessible_motion"
+  ]
+}

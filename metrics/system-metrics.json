@@ -1,9 +1,13 @@
 {
-  "total_projects": 0,
-  "avg_cycles_to_close": 0.0,
+  "total_projects": 1,
+  "avg_cycles_to_close": 2.0,
   "circuit_breaker_triggers": 0,
-  "test_failure_rates": {},
-  "most_problematic_project_types": [],
-  "last_updated": "2026-05-13T00:00:00Z",
+  "test_failure_rates": {
+    "12_privacy_consent": 1,
+    "08_seo_metadata": 1,
+    "14_accessible_motion": 1
+  },
+  "most_problematic_project_types": ["landing"],
+  "last_updated": "2026-05-13T11:53:29Z",
   "_notes": "Se actualiza automáticamente al cierre de cada ciclo (fase 8)."
 }

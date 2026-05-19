@@ -1,26 +1,29 @@
-# Voice Guide — [Marca]
+# Voice Guide — Sereno Yoga
 
-> ⚠️ **Plantilla.** Reemplazá con la voz real del cliente.
+Marca de estudios de yoga urbanos, foco en práctica cotidiana sin postureo
+ni misticismo. Vocabulario simple, calma sin solemnidad.
 
-## Atributos (3 a 5)
-- **Claro** — sin jerga, frases cortas.
-- **Cálido** — humano, no corporativo.
-- **Directo** — decimos lo que hay que hacer, no rodeamos.
+## Atributos
+- **Calmo, no aburrido.** Inspirar pausa sin sonar a meditación guiada.
+- **Cercano, no infantil.** Hablamos de vos, sin diminutivos forzados.
+- **Concreto, no aspiracional.** "Empezá hoy" antes que "transformá tu vida".
 
 ## Tono por estado
-| Estado | Tono | Ejemplo |
-|--------|------|---------|
-| success | Celebratorio breve, sin signos de exclamación múltiples | "Listo, lo guardamos." |
-| error   | Responsable, propone solución, no acusa | "No reconocemos ese formato. ¿Probás de nuevo?" |
-| empty   | Invita a la acción, explica el porqué | "Todavía no hay items. Sumá el primero acá." |
-| loading | Sobrio, sin promesas | "Cargando…" |
-| idle    | Funcional, foco en la acción | "Ver más" |
+
+| Estado | Tono | Ejemplo bueno | Ejemplo malo |
+|--------|------|---------------|--------------|
+| success | Sereno, breve | "Listo, te esperamos el martes." | "¡Reservaste tu clase! 🧘✨" |
+| error   | Responsable, sin drama | "No pudimos confirmar tu lugar. Probá de nuevo." | "Ha ocurrido un error inesperado." |
+| empty   | Invitación calma | "Todavía no hay clases en tu zona. Avisanos y te escribimos." | "No hay resultados." |
+| loading | Sobrio, sin promesas | "Buscando horarios…" | "¡Ya casi! 🙌" |
+| idle    | Funcional | "Reservar clase" | "Comenzá tu viaje" |
 
 ## Vocabulario
-- **Sí usar:** vos, acá, listo, sumá, probá.
-- **Nunca:** "haga clic", "click aquí", "lamentamos las molestias", emojis en errores.
+- **Sí usar:** vos, tu práctica, hoy, cerca, tranquilo, cuerpo, respirar.
+- **Nunca:** namasté, energía cósmica, "súbete a la ola", "¡vamos!", emojis en errores, "casi listo".
 
 ## Límites
-- CTAs ≤ 24 caracteres
-- Headings ≤ 60 caracteres
-- Idioma base: es-AR
+- CTAs ≤ 22 caracteres.
+- Headings ≤ 56.
+- Idioma base: es-AR.
+- Cero exclamaciones en estados de error o vacío.

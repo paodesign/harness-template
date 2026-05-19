@@ -1,40 +1,48 @@
-# UX Harness Framework v3.3 — Seed Pack
+# UX Harness v3.3 — Pack para Antigravity
 
-Este repositorio es el punto de partida para operar el arnés. Contiene:
-- 4 agentes con prompts ejecutables (`/agents`)
-- ADN del sistema (`/core`)
-- Batería de calidad de 14 tests (`/quality`)
-- Plantillas reutilizables (`/templates`)
-- Telemetría global (`/metrics`)
-- Un proyecto de ejemplo (`/projects/example-landing`)
+Pack listo para correr el primer ciclo del arnés en Antigravity sobre un
+caso concreto: **Sereno Yoga**, una landing de reserva de clases.
 
-## Cómo correr el primer ciclo
+## Por dónde empezar
+1. Leé `ANTIGRAVITY_PLAYBOOK.md` — guía paso a paso para Antigravity.
+2. Revisá `core/voice-guide.md` y `core/design-system.md` (ya están rellenados
+   con la identidad de Sereno Yoga; tocalos si querés cambiar el caso).
+3. Abrí `projects/sereno-yoga/context.md` para entender el brief.
+4. Seguí las 8 fases del playbook.
 
-1. **Personalizá el ADN.** Editá `core/design-system.md` con tus tokens y
-   `core/voice-guide.md` con la voz de tu marca o cliente.
+## Estructura
 
-2. **Definí un proyecto.** Copiá `templates/context.template.md` a
-   `projects/[nombre]/context.md` y completalo. Validalo contra
-   `projects/[nombre]/context.schema.json`.
-
-3. **Corré los agentes en orden** (fases 1→8 del lifecycle):
-   - Builder → carga core + context
-   - Tester → valida brief contra schema
-   - Writer → genera `content.json`
-   - Builder → produce código consumiendo content.json
-   - Tester → ejecuta tests 01–14
-   - Walker → simula personas
-   - Humano → revisa y firma `feedback.md`
-   - Builder → cierra ciclo y actualiza baseline + metrics
-
-Cada agente vive en `agents/[nombre].prompt.md`. Cargá ese prompt como
-system prompt en tu LLM y pasale los archivos que su sección "Inputs" indica.
+```
+ux-harness/
+├── ANTIGRAVITY_PLAYBOOK.md   ← empezá acá
+├── README.md
+├── agents.md
+├── agents/                   ← 4 prompts ejecutables
+│   ├── builder.prompt.md
+│   ├── tester.prompt.md
+│   ├── writer.prompt.md
+│   ├── walker.prompt.md
+│   └── agents-version.json
+├── core/                     ← ADN (rellenado para Sereno Yoga)
+│   ├── design-system.md
+│   ├── ux-principles.md
+│   ├── responsive-spec.md
+│   └── voice-guide.md
+├── quality/                  ← 14 reglas + heurísticas
+├── templates/                ← plantillas reutilizables
+├── metrics/                  ← telemetría global del sistema
+└── projects/
+    └── sereno-yoga/          ← el caso de prueba
+        ├── context.md
+        ├── .env
+        ├── changelog.md
+        ├── src/   dist/   assets/
+```
 
 ## Reglas inmutables
-
-- El Builder NO genera copy (consume `content.json`).
-- El Writer NO toca código.
-- El Tester es read-only sobre `/src` y `/dist`.
-- El Walker reporta percepción, no errores técnicos.
+- Builder no genera copy → consume content.json.
+- Writer no toca código.
+- Tester es read-only.
+- Walker reporta percepción, no errores técnicos.
 - Sin `context.md` válido contra schema, el Builder no arranca.
-- Tras 5 ciclos sin progreso, el Circuit Breaker detiene el sistema.
+- 5 ciclos sin progreso → Circuit Breaker.
