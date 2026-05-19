@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patagonia Propiedades | Inmobiliaria en Neuquén</title>
+    <meta name="description" content="Encontrá casas, departamentos y terrenos en Neuquén. Líderes en el mercado regional.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="container nav">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="https://placehold.co/180x40/FF385C/white?text=Patagonia" alt="Logo" style="height: 32px;">
+                </a>
+            </div>
+            
+            <ul class="nav-links">
+                <li><a href="index.html" style="border-bottom: 2px solid var(--color-ink); padding-bottom: 8px;">Inicio</a></li>
+                <li><a href="listado.html">Propiedades</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+
+            <div class="account-menu" style="display: flex; align-items: center; gap: 12px; border: 1px solid var(--color-hairline); padding: 8px 12px; border-radius: 999px;">
+                <span style="font-size: 20px;">☰</span>
+                <div style="background: var(--color-muted); color: white; width: 30px; height: 30px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 12px;">👤</div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero & Search Pill -->
+        <section class="hero">
+            <div class="container">
+                <h1 class="hero-heading">Inspiración para tu próximo hogar</h1>
+                
+                <div class="search-bar-pill">
+                    <div class="search-field-segment">
+                        <span class="search-field-label">Dónde</span>
+                        <span class="search-field-placeholder">Buscar destinos</span>
+                    </div>
+                    <div style="width: 1px; height: 32px; background: var(--color-hairline);"></div>
+                    <div class="search-field-segment">
+                        <span class="search-field-label">Tipo</span>
+                        <span class="search-field-placeholder">Casa, Depto...</span>
+                    </div>
+                    <div style="width: 1px; height: 32px; background: var(--color-hairline);"></div>
+                    <div class="search-field-segment">
+                        <span class="search-field-label">Quién</span>
+                        <span class="search-field-placeholder">¿Cuántos?</span>
+                    </div>
+                    <button class="search-orb">
+                        <span style="color: white; font-size: 20px;">🔍</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Category Bar Simulation -->
+        <div class="container" style="display: flex; gap: 32px; overflow-x: auto; padding: 16px 0; border-bottom: 1px solid var(--color-hairline-soft); margin-bottom: 32px;">
+            <div style="text-align: center; opacity: 0.6; cursor: pointer;">
+                <div style="font-size: 24px;">🏡</div>
+                <span style="font-size: 12px; font-weight: 600;">Casas</span>
+            </div>
+            <div style="text-align: center; border-bottom: 2px solid black; padding-bottom: 8px; cursor: pointer;">
+                <div style="font-size: 24px;">🏙️</div>
+                <span style="font-size: 12px; font-weight: 600;">Deptos</span>
+            </div>
+            <div style="text-align: center; opacity: 0.6; cursor: pointer;">
+                <div style="font-size: 24px;">🏞️</div>
+                <span style="font-size: 12px; font-weight: 600;">Lotes</span>
+            </div>
+        </div>
+
+        <!-- Property Grid -->
+        <section class="container" style="padding-bottom: 64px;">
+            <div class="property-grid">
+                <!-- Card 1 -->
+                <article class="property-card">
+                    <div class="property-image">
+                        <img src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?auto=format&fit=crop&q=80&w=600" alt="Casa Moderna">
+                        <div style="position: absolute; top: 12px; left: 12px; background: white; padding: 4px 10px; border-radius: 999px; font-size: 12px; font-weight: 600; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">Favorito entre huéspedes</div>
+                        <div style="position: absolute; top: 12px; right: 12px; color: white; font-size: 24px;">♡</div>
+                    </div>
+                    <div class="property-title">Neuquén, Argentina</div>
+                    <div class="property-location">A 12 kilómetros de distancia</div>
+                    <div class="property-location">12-17 de mayo</div>
+                    <div class="property-price">AR$ 45.000 <span style="font-weight: 400;">noche</span></div>
+                </article>
+
+                <!-- Card 2 -->
+                <article class="property-card">
+                    <div class="property-image">
+                        <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&q=80&w=600" alt="Departamento">
+                        <div style="position: absolute; top: 12px; right: 12px; color: white; font-size: 24px;">♡</div>
+                    </div>
+                    <div class="property-title">Plottier, Neuquén</div>
+                    <div class="property-location">A 25 kilómetros de distancia</div>
+                    <div class="property-location">20-25 de mayo</div>
+                    <div class="property-price">AR$ 32.000 <span style="font-weight: 400;">noche</span></div>
+                </article>
+
+                <!-- Card 3 -->
+                <article class="property-card">
+                    <div class="property-image">
+                        <img src="https://images.unsplash.com/photo-1512918766671-56001159af29?auto=format&fit=crop&q=80&w=600" alt="Terreno">
+                        <div style="position: absolute; top: 12px; right: 12px; color: white; font-size: 24px;">♡</div>
+                    </div>
+                    <div class="property-title">Confluencia, Neuquén</div>
+                    <div class="property-location">A 5 kilómetros de distancia</div>
+                    <div class="property-location">Recién agregado</div>
+                    <div class="property-price">AR$ 12.500.000 <span style="font-weight: 400;">total</span></div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="container" style="border-top: 1px solid var(--color-hairline-soft); padding: 48px 0; color: var(--color-muted); font-size: 14px;">
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 32px;">
+            <div>
+                <h4 style="color: var(--color-ink); margin-bottom: 16px;">Asistencia</h4>
+                <p>Centro de ayuda</p>
+                <p>AirCover</p>
+            </div>
+            <div>
+                <h4 style="color: var(--color-ink); margin-bottom: 16px;">Modo anfitrión</h4>
+                <p>Poné tu casa en Patagonia</p>
+                <p>AirCover para anfitriones</p>
+            </div>
+            <div>
+                <h4 style="color: var(--color-ink); margin-bottom: 16px;">Airbnb</h4>
+                <p>Newsroom</p>
+                <p>Nuevas funciones</p>
+            </div>
+        </div>
+        <div style="margin-top: 48px; border-top: 1px solid var(--color-hairline-soft); padding-top: 24px; display: flex; justify-content: space-between;">
+            <span>© 2026 Patagonia Propiedades, Inc.</span>
+            <div style="display: flex; gap: 16px; font-weight: 600; color: var(--color-ink);">
+                <span>🌐 Español (AR)</span>
+                <span>$ ARS</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>

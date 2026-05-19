@@ -1,0 +1,66 @@
+{
+  "schema_version": "1.0",
+  "source": "Nielsen 10 + custom UX Harness",
+  "heuristics": [
+    {
+      "id": "H1",
+      "name": "Visibilidad del estado del sistema",
+      "check": "¿El usuario sabe en todo momento qué está pasando?"
+    },
+    {
+      "id": "H2",
+      "name": "Match con el mundo real",
+      "check": "¿El vocabulario es familiar para la audiencia declarada?"
+    },
+    {
+      "id": "H3",
+      "name": "Control y libertad del usuario",
+      "check": "¿Hay salida clara de cada acción (undo, cancel, back)?"
+    },
+    {
+      "id": "H4",
+      "name": "Consistencia y estándares",
+      "check": "¿Patrones reutilizados se comportan igual?"
+    },
+    {
+      "id": "H5",
+      "name": "Prevención de errores",
+      "check": "¿Las acciones destructivas piden confirmación?"
+    },
+    {
+      "id": "H6",
+      "name": "Reconocer antes que recordar",
+      "check": "¿La info necesaria está visible cuando se necesita?"
+    },
+    {
+      "id": "H7",
+      "name": "Flexibilidad y eficiencia",
+      "check": "¿Hay atajos o caminos rápidos para usuarios avanzados?"
+    },
+    {
+      "id": "H8",
+      "name": "Diseño estético y minimalista",
+      "check": "¿Cada elemento aporta? ¿Hay ruido visual prescindible?"
+    },
+    {
+      "id": "H9",
+      "name": "Ayudar a reconocer, diagnosticar y recuperarse de errores",
+      "check": "¿Los mensajes de error son accionables?"
+    },
+    {
+      "id": "H10",
+      "name": "Ayuda y documentación",
+      "check": "¿Hay ayuda contextual cuando se necesita?"
+    },
+    {
+      "id": "HX1",
+      "name": "Voice match (custom)",
+      "check": "¿El copy suena como la marca declarada en voice-guide?"
+    },
+    {
+      "id": "HX2",
+      "name": "Cobertura de estados (custom)",
+      "check": "¿Cada vista resuelve idle/loading/empty/error/success?"
+    }
+  ]
+}

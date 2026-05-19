@@ -1,0 +1,84 @@
+{
+  "name": "Schema de Validación del Brief",
+  "version": "1.0",
+  "description": "Define los campos mínimos que debe tener todo context.md para que el agente inicie la producción.",
+  "fields": {
+    "required": [
+      {
+        "name": "project_name",
+        "description": "Nombre del proyecto o cliente",
+        "validation": "No vacío"
+      },
+      {
+        "name": "objective",
+        "description": "Objetivo principal del proyecto. Qué se quiere lograr y cómo se mide el éxito.",
+        "validation": "Mínimo 30 caracteres. Debe incluir al menos un resultado medible o verificable."
+      },
+      {
+        "name": "target_audience",
+        "description": "Audiencia primaria del sitio/producto.",
+        "validation": "Debe especificar al menos: rango de edad, contexto de uso (mobile/desktop, dónde, cuándo) y nivel de familiaridad con tecnología."
+      },
+      {
+        "name": "deliverables",
+        "description": "Lista de entregables específicos (páginas, componentes, flujos).",
+        "validation": "Al menos 1 entregable listado con descripción."
+      },
+      {
+        "name": "tone_and_voice",
+        "description": "Tono de comunicación y personalidad de marca.",
+        "validation": "Al menos 3 adjetivos o una descripción de personalidad de marca."
+      },
+      {
+        "name": "constraints",
+        "description": "Restricciones técnicas y de negocio.",
+        "validation": "Debe listar al menos: tecnologías requeridas/prohibidas, y una restricción de negocio."
+      }
+    ],
+    "recommended": [
+      {
+        "name": "brand_colors",
+        "description": "Paleta de colores de marca (hex values). Sobrescribe --color-primary y --color-secondary del design-system."
+      },
+      {
+        "name": "brand_fonts",
+        "description": "Tipografías de marca (Google Fonts o archivos). Sobrescribe --font-sans del design-system."
+      },
+      {
+        "name": "competitors",
+        "description": "URLs de competidores o referencias visuales. Qué les gusta y qué no."
+      },
+      {
+        "name": "existing_content",
+        "description": "Textos, imágenes, logos y assets que ya existen."
+      },
+      {
+        "name": "analytics",
+        "description": "Datos de analytics existentes: dispositivos más usados, páginas más visitadas, tasa de rebote."
+      }
+    ],
+    "optional": [
+      {
+        "name": "deadline",
+        "description": "Fecha de entrega o hitos intermedios."
+      },
+      {
+        "name": "budget_tier",
+        "description": "Nivel de complejidad presupuestada (básico, estándar, premium). Afecta la cantidad de componentes custom."
+      },
+      {
+        "name": "integrations",
+        "description": "Servicios de terceros a integrar (formularios, analytics, chat, CRM)."
+      },
+      {
+        "name": "seo_requirements",
+        "description": "Palabras clave objetivo, estructura de URLs, requisitos de metadata."
+      }
+    ]
+  },
+  "validation_behavior": {
+    "missing_required": "BLOQUEAR producción. El Builder debe solicitar la información faltante antes de continuar.",
+    "missing_recommended": "ADVERTIR. El Builder puede continuar pero documenta la ausencia en el test-report.",
+    "missing_optional": "IGNORAR. No afecta el flujo."
+  }
+}

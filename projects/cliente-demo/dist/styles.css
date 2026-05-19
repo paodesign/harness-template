@@ -1,0 +1,190 @@
+/* 
+   UX Harness — Airbnb Style Implementation (v3.2)
+   Client: Patagonia Propiedades
+*/
+
+:root {
+  /* Airbnb Neutral Palette */
+  --color-white: #FFFFFF;
+  --color-canvas: #FFFFFF;
+  --color-surface-soft: #F7F7F7;
+  --color-surface-strong: #F2F2F2;
+  --color-hairline: #DDDDDD;
+  --color-hairline-soft: #EBEBEB;
+  
+  /* Airbnb Brand Palette (Rausch & Ink) */
+  --color-primary: #FF385C;         /* Rausch */
+  --color-primary-hover: #E00B41;
+  --color-primary-light: #FFD1DA;
+  --color-ink: #222222;
+  --color-body: #3F3F3F;
+  --color-muted: #6A6A6A;
+
+  --color-success: #008A05;
+  --color-error: #C13515;
+
+  /* Typography (Airbnb Style Hierarchy) */
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --text-4xl: 1.75rem;    /* 28px - Display XL */
+  --text-3xl: 1.375rem;   /* 22px - Display LG */
+  --text-2xl: 1.3125rem;  /* 21px - Display MD */
+  --text-xl: 1.25rem;     /* 20px - Display SM */
+  --text-lg: 1rem;        /* 16px - Title MD */
+  --text-base: 1rem;      /* 16px - Body MD */
+  --text-sm: 0.875rem;    /* 14px - Body SM */
+  --text-xs: 0.75rem;     /* 12px - Micro */
+
+  /* Spacing (Airbnb 8px system) */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-12: 48px;
+  --space-16: 64px;
+
+  /* Rounded Corners */
+  --radius-sm: 8px;       /* Buttons */
+  --radius-md: 14px;      /* Cards */
+  --radius-lg: 20px;      /* Detail photo */
+  --radius-full: 9999px;  /* Pill / Search Orb */
+
+  /* Elevation */
+  --shadow-airbnb: rgba(0, 0, 0, 0.02) 0 0 0 1px, rgba(0, 0, 0, 0.04) 0 2px 6px 0, rgba(0, 0, 0, 0.1) 0 4px 8px 0;
+}
+
+/* Reset & Base */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: var(--font-sans);
+  font-size: var(--text-base);
+  line-height: 1.5;
+  color: var(--color-ink);
+  background-color: var(--color-canvas);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3 { color: var(--color-ink); font-weight: 600; line-height: 1.2; }
+
+/* Layout */
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 var(--space-6);
+}
+@media (min-width: 1280px) { .container { max-width: 1280px; } }
+
+/* Header & Nav */
+.header {
+  background: var(--color-canvas);
+  border-bottom: 1px solid var(--color-hairline-soft);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  height: 80px;
+  display: flex;
+  align-items: center;
+}
+.nav { display: flex; justify-content: space-between; align-items: center; width: 100%; }
+.nav-links { display: flex; gap: var(--space-8); list-style: none; }
+.nav-links a { 
+  text-decoration: none; 
+  color: var(--color-ink); 
+  font-weight: 600; 
+  font-size: var(--text-sm);
+}
+
+/* Search Bar (Airbnb Style) */
+.search-bar-pill {
+  background: var(--color-white);
+  border: 1px solid var(--color-hairline);
+  box-shadow: var(--shadow-airbnb);
+  border-radius: var(--radius-full);
+  height: 64px;
+  display: flex;
+  align-items: center;
+  padding-left: var(--space-6);
+  padding-right: 8px;
+  max-width: 850px;
+  margin: 0 auto;
+  transition: box-shadow 0.2s ease;
+}
+.search-bar-pill:hover { box-shadow: rgba(0, 0, 0, 0.18) 0px 6px 16px; }
+
+.search-field-segment {
+  flex: 1;
+  padding: 0 var(--space-4);
+  display: flex;
+  flex-direction: column;
+}
+.search-field-label { font-size: var(--text-xs); font-weight: 700; color: var(--color-ink); }
+.search-field-placeholder { font-size: var(--text-sm); color: var(--color-muted); }
+
+.search-orb {
+  background: var(--color-primary);
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+}
+
+/* Hero */
+.hero {
+  padding: var(--space-12) 0;
+  text-align: center;
+}
+.hero-heading { font-size: var(--text-4xl); margin-bottom: var(--space-4); }
+
+/* Property Cards */
+.property-grid {
+  display: grid;
+  gap: var(--space-6);
+  margin-top: var(--space-8);
+}
+@media (min-width: 768px) { .property-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1024px) { .property-grid { grid-template-columns: repeat(3, 1fr); } }
+@media (min-width: 1280px) { .property-grid { grid-template-columns: repeat(4, 1fr); } }
+
+.property-card { cursor: pointer; }
+.property-image {
+  aspect-ratio: 1 / 1;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  position: relative;
+  margin-bottom: var(--space-3);
+}
+.property-image img { width: 100%; height: 100%; object-fit: cover; }
+
+.property-title { font-size: var(--text-lg); font-weight: 600; margin-bottom: 2px; }
+.property-location { font-size: var(--text-sm); color: var(--color-muted); }
+.property-price { font-size: var(--text-sm); font-weight: 700; margin-top: 4px; }
+
+/* Buttons */
+.btn {
+  padding: 14px 24px;
+  border-radius: var(--radius-sm);
+  font-weight: 500;
+  font-size: var(--text-base);
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+.btn-primary { background: var(--color-primary); color: var(--color-white); }
+.btn-primary:hover { background: var(--color-primary-hover); }
+
+/* Listing Page Sidebar */
+.listing-layout {
+  display: grid;
+  gap: var(--space-8);
+  margin-top: var(--space-8);
+}
+@media (min-width: 1024px) { .listing-layout { grid-template-columns: 300px 1fr; } }
+
+/* Utils */
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); border: 0; }

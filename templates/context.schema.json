@@ -1,0 +1,103 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "UX Harness Project Context",
+  "type": "object",
+  "required": [
+    "projectName",
+    "objective",
+    "audience",
+    "projectType",
+    "personas",
+    "constraints",
+    "flags"
+  ],
+  "properties": {
+    "projectName": {
+      "type": "string",
+      "minLength": 3
+    },
+    "objective": {
+      "type": "string",
+      "minLength": 20
+    },
+    "audience": {
+      "type": "string",
+      "minLength": 10
+    },
+    "projectType": {
+      "type": "string",
+      "enum": [
+        "landing",
+        "ecommerce",
+        "blog",
+        "webapp",
+        "dashboard",
+        "directory"
+      ]
+    },
+    "personas": {
+      "type": "array",
+      "minItems": 2,
+      "items": {
+        "type": "object",
+        "required": [
+          "name",
+          "jtbd"
+        ],
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "age": {
+            "type": "integer"
+          },
+          "jtbd": {
+            "type": "string",
+            "minLength": 10
+          }
+        }
+      }
+    },
+    "constraints": {
+      "type": "object",
+      "properties": {
+        "languages": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "browsers": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "brandTokens": {
+          "type": "string"
+        }
+      }
+    },
+    "flags": {
+      "type": "object",
+      "properties": {
+        "maps": {
+          "type": "boolean",
+          "default": false
+        },
+        "auth": {
+          "type": "boolean",
+          "default": false
+        },
+        "i18n": {
+          "type": "boolean",
+          "default": false
+        },
+        "forms": {
+          "type": "boolean",
+          "default": false
+        }
+      }
+    }
+  }
+}

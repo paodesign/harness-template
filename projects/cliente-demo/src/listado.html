@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Propiedades en Neuquén | Patagonia Propiedades</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="container nav">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="https://placehold.co/180x40/FF385C/white?text=Patagonia" alt="Logo" style="height: 32px;">
+                </a>
+            </div>
+            
+            <div class="search-bar-pill" style="height: 48px; max-width: 400px; margin: 0;">
+                <div class="search-field-segment" style="padding: 0 16px;">
+                    <span style="font-size: 14px; font-weight: 600;">Cualquier lugar</span>
+                </div>
+                <div style="width: 1px; height: 24px; background: var(--color-hairline);"></div>
+                <div class="search-field-segment" style="padding: 0 16px;">
+                    <span style="font-size: 14px; font-weight: 600;">Cualquier semana</span>
+                </div>
+                <button class="search-orb" style="width: 32px; height: 32px;">
+                    <span style="color: white; font-size: 14px;">🔍</span>
+                </button>
+            </div>
+
+            <div class="account-menu" style="display: flex; align-items: center; gap: 12px; border: 1px solid var(--color-hairline); padding: 8px 12px; border-radius: 999px;">
+                <span style="font-size: 20px;">☰</span>
+                <div style="background: var(--color-muted); color: white; width: 30px; height: 30px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 12px;">👤</div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container" style="padding-top: 32px;">
+        <div class="listing-header" style="border-bottom: 1px solid var(--color-hairline-soft); padding-bottom: 16px; margin-bottom: 32px; display: flex; justify-content: space-between; align-items: center;">
+            <h1 style="font-size: 24px; font-weight: 600;">Propiedades en Neuquén</h1>
+            <button class="btn" style="border: 1px solid var(--color-hairline); background: white; padding: 8px 16px; font-size: 12px; display: flex; align-items: center; gap: 8px;">
+                <span>⚙️</span> Filtros
+            </button>
+        </div>
+
+        <div class="property-grid" style="margin-top: 0;">
+            <!-- Property cards with Airbnb style -->
+            <article class="property-card" onclick="location.href='detalle.html'">
+                <div class="property-image">
+                    <img src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?auto=format&fit=crop&q=80&w=600" alt="Casa">
+                    <div style="position: absolute; top: 12px; right: 12px; color: white; font-size: 24px;">♡</div>
+                </div>
+                <div class="property-title">Neuquén, Zona Este</div>
+                <div class="property-location">Casa de 4 ambientes</div>
+                <div class="property-location">AR$ 62.000.000</div>
+            </article>
+
+            <article class="property-card" onclick="location.href='detalle.html'">
+                <div class="property-image">
+                    <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&q=80&w=600" alt="Depto">
+                    <div style="position: absolute; top: 12px; right: 12px; color: white; font-size: 24px;">♡</div>
+                </div>
+                <div class="property-title">Neuquén, Centro</div>
+                <div class="property-location">Dúplex moderno</div>
+                <div class="property-location">AR$ 250.000 <span style="font-weight: 400;">noche</span></div>
+            </article>
+
+            <!-- More cards... -->
+        </div>
+    </main>
+
+    <script src="main.js"></script>
+</body>
+</html>

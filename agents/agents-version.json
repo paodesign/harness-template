@@ -1,0 +1,23 @@
+{
+  "framework_version": "3.3.0",
+  "agents": {
+    "builder": {
+      "version": "1.0.0",
+      "prompt_hash": "PLACEHOLDER_compute_on_first_run"
+    },
+    "tester": {
+      "version": "2.1.0",
+      "prompt_hash": "PLACEHOLDER_compute_on_first_run"
+    },
+    "writer": {
+      "version": "1.0.0",
+      "prompt_hash": "PLACEHOLDER_compute_on_first_run"
+    },
+    "walker": {
+      "version": "1.0.0",
+      "prompt_hash": "PLACEHOLDER_compute_on_first_run"
+    }
+  },
+  "updated_at": "2026-05-13T00:00:00Z",
+  "notes": "Tras la primera carga, computar SHA-256 real de cada prompt.md y reemplazar PLACEHOLDER."
+}

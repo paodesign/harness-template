@@ -1,0 +1,17 @@
+{
+  "_format": "test_id: failure_rate (0.0 a 1.0) across all closed cycles",
+  "01_context_integrity": 0.0,
+  "02_semantic_validation": 0.0,
+  "03_visual_consistency": 0.0,
+  "04_responsive": 0.0,
+  "05_accessibility": 0.0,
+  "06_navigation": 0.0,
+  "07_performance": 0.0,
+  "08_seo": 0.0,
+  "09_maps": 0.0,
+  "10_regression": 0.0,
+  "11_states": 0.0,
+  "12_privacy": 0.0,
+  "13_i18n": 0.0,
+  "14_motion": 0.0
+}

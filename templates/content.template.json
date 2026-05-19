@@ -1,0 +1,30 @@
+{
+  "$schema_version": "1.0",
+  "language": "es-AR",
+  "components": {
+    "[ComponentName]": {
+      "idle": {
+        "heading": "",
+        "body": "",
+        "cta": ""
+      },
+      "loading": {
+        "label": ""
+      },
+      "empty": {
+        "heading": "",
+        "body": "",
+        "cta": ""
+      },
+      "error": {
+        "heading": "",
+        "body": "",
+        "cta": ""
+      },
+      "success": {
+        "toast": ""
+      }
+    }
+  },
+  "_notes": "Cada componente declara los 5 estados. Si uno no aplica, usar { '_not_applicable': 'razón' }."
+}
