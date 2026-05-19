@@ -1,87 +1,109 @@
-# Context — Patagonia Propiedades
-
-> Brief del cliente para prueba piloto del UX Harness Framework v3.
+# Context — Patagónica Propiedades
 
 ---
 
 ## project_name
-Patagonia Propiedades — Rediseño web
+Patagónica Propiedades — Rediseño web
 
 ## objective
-Rediseñar el sitio web de Patagonia Propiedades para aumentar las consultas de propiedades en un 30% en los próximos 6 meses. El éxito se mide por: cantidad de formularios de contacto enviados, tiempo promedio en el sitio, y tasa de rebote en la página de listado de propiedades (actualmente 72%, objetivo < 50%).
+Rediseñar el sitio web para aumentar consultas de propiedades en un 30% en 6 meses. Éxito medido por: formularios enviados, tiempo en sitio, tasa de rebote en listado (actual 72%, objetivo < 50%).
 
 ## target_audience
-- **Edad**: 28-55 años
-- **Contexto**: Personas buscando comprar, alquilar o invertir en propiedades en Neuquén capital y alrededores. Navegan principalmente desde el celular (68% del tráfico actual) durante horarios de oficina y nocturno
-- **Familiaridad tech**: Media — usan WhatsApp, Instagram, MercadoLibre. Esperan poder filtrar, ver fotos y contactar rápido
-- **Motivación**: Encontrar propiedades que coincidan con su presupuesto y zona rápidamente, sin tener que llamar para pedir información básica
+- Edad: 28-55 años
+- Contexto: Buscan comprar/alquilar en Villa La Angostura (Neuquén). 68% mobile, horario oficina y nocturno
+- Tech: Media — WhatsApp, Instagram, MercadoLibre. Esperan filtrar, ver fotos, contactar rápido
 
 ## deliverables
-1. **Home page**: Hero con buscador de propiedades, propiedades destacadas, sección de confianza (años de experiencia, propiedades vendidas), CTA a contacto
-2. **Listado de propiedades**: Grilla con filtros (tipo, zona, precio, ambientes), cards de propiedad con foto, precio, ubicación y datos clave
-3. **Detalle de propiedad**: Galería de fotos, datos técnicos, mapa de ubicación, formulario de consulta
-4. **Página de contacto**: Formulario, WhatsApp directo, mapa de la oficina, horarios
-5. **Footer global**: Links, redes sociales, datos de contacto, logo de matrícula
+1. **Home**: Hero + buscador + propiedades destacadas + sección confianza + CTA contacto
+2. **Listado**: Grilla con filtros (tipo, zona, precio, ambientes, operación) + cards de propiedad
+3. **Detalle**: Galería + datos técnicos + mapa + formulario consulta
+4. **Contacto**: Formulario + WhatsApp + mapa oficina + horarios
+5. **Footer global**: Links, redes, contacto, matrícula
 
 ## tone_and_voice
-- **Profesional pero cercano**: No somos un banco, somos vecinos que saben de propiedades
-- **Directo**: Sin rodeos, información clara y completa
-- **Confiable**: Datos concretos, sin promesas vagas
-- **Adjetivos de marca**: Confiable, regional, accesible
-- **Idioma**: Español rioplatense con voseo ("Encontrá tu próximo hogar", no "Encuentre su próximo hogar")
+- Profesional pero cercano. Directo. Confiable.
+- Adjetivos: Confiable, regional, premium
+- Español rioplatense con voseo ("Encontrá tu próximo hogar")
 
 ## constraints
 ### Técnicas
-- HTML + CSS + JS vanilla (sin frameworks — el cliente quiere algo que cualquier dev pueda mantener)
-- Hosting en servidor compartido con PHP (no Node)
-- Las imágenes de propiedades vienen de una carpeta de Google Drive (no hay CMS por ahora)
-- Mobile-first obligatorio (68% tráfico mobile)
+- HTML + CSS + JS vanilla (sin frameworks)
+- Hosting compartido con PHP
+- Mobile-first obligatorio (68% mobile)
 
 ### Negocio
-- No incluir precios en dólares (solo pesos argentinos)
-- El formulario de contacto debe pedir: nombre, teléfono (obligatorio), email (opcional), mensaje
-- WhatsApp es el canal principal — debe estar siempre visible
-- No usar fotos de stock para propiedades — solo fotos reales del cliente
+- Precios en USD (mercado inmobiliario patagónico)
+- Formulario contacto: nombre completo, correo electrónico, teléfono, asunto, mensaje
+- WhatsApp siempre visible (botón flotante)
+- Operaciones: Venta, Alquiler, Alquiler Temporal
 
----
+## brand_identity
+- **Nombre comercial**: PATAGÓNICA PROPIEDADES
+- **Slogan**: "Viví Villa La Angostura"
+- **Fundadores**: Agustín Mercau & Gabriel Salama (fundada en 2005)
+- **Logo**: Emblema circular con "P" estilizada + nombre en sans-serif mayúsculas
+- **Primer desarrollo**: Altos del Cauquén
 
 ## brand_colors
-| Uso | Color | Hex |
-|-----|-------|-----|
-| Primario (confianza) | Azul petróleo | `#1B4D5C` |
-| Primario hover | Azul petróleo oscuro | `#143D49` |
-| Primario light | Azul muy claro | `#E8F4F8` |
-| Secundario (acción) | Naranja cálido | `#E8722A` |
-| Secundario hover | Naranja oscuro | `#D4611F` |
+| Uso | Hex |
+|-----|-----|
+| Primario (teal oscuro) | `#1B4D5C` |
+| Primario hover | `#143D49` |
+| Primario light | `#E8F4F8` |
+| Secundario (naranja) | `#E8722A` |
+| Secundario hover | `#D4611F` |
+| Footer/Header bg | `#1B4D5C` |
 
 ## brand_fonts
-- **Títulos**: Poppins (Google Fonts) — weights 600, 700
-- **Cuerpo**: Inter (Google Fonts) — weights 400, 500
+- Títulos: Poppins (600, 700)
+- Cuerpo: Inter (400, 500)
+
+## contact_info
+- **Dirección**: Cerro Bayo 69, Villa La Angostura, Neuquén, Argentina
+- **Teléfono Ventas**: +54 9 294 423-1321
+- **Teléfono Alquileres Turísticos**: +54 9 294 472-8165
+- **WhatsApp**: +5492944231321
+- **Instagram**: @patagonicapropiedades (https://www.instagram.com/patagonicapropiedades)
+- **Email formato**: nombre.apellido@patagonicapropiedades.com.ar
+
+## property_catalog
+| Tipo | Cantidad |
+|------|----------|
+| Departamento | 127 |
+| Terreno o Lote | 93 |
+| Casa | 75 |
+| Local Comercial | 10 |
+| Hotel | 9 |
+| Campo | 2 |
+| Galpón | 1 |
+| Negocio/Fondo de Comercio | 1 |
+| **Total** | **~318** |
+
+## property_data_fields
+- Título, Precio (USD), Operación (Venta/Alquiler/Temporal)
+- Superficie total (m²), Superficie cubierta (m²), Superficie terreno (m²)
+- Dormitorios, Baños, Ambientes, Plantas, Garages, Antigüedad
+- Código interno, Tipo de propiedad
+- Servicios (agua, gas, internet, luz, losa radiante, etc.)
+- Ambientes detallados (cocina, living, jardín, etc.)
+- Galería de fotos
 
 ## competitors
-- **remax.com.ar**: Les gusta el buscador con filtros, no les gusta que se siente "genérico" y frío
-- **zonaprop.com.ar**: Les gusta la cantidad de info en las cards, no les gusta que es muy sobrecargado
-- **Inmobiliarias locales de Neuquén**: La mayoría tiene sitios desactualizados o solo Instagram
-
-## existing_content
-- Logo en SVG y PNG (entregado en `/assets/logo/`)
-- Fotos de 12 propiedades activas (entregadas en `/assets/propiedades/`)
-- Textos de "Quiénes somos" (entregado en `/assets/textos/`)
+- remax.com.ar: Buen buscador, pero genérico y frío
+- zonaprop.com.ar: Mucha info, pero sobrecargado
+- Inmobiliarias locales: Desactualizadas o solo Instagram
+- Sitio actual (patagonicapropiedades.com.ar): Funcional pero diseño genérico de plataforma Brokian
 
 ## analytics
-- Tráfico: 2,400 visitas/mes
-- Dispositivos: 68% mobile, 24% desktop, 8% tablet
-- Páginas más vistas: Home (38%), Listado (29%), Contacto (15%)
-- Tasa de rebote: Home 45%, Listado 72%, Detalle 38%
-- Tiempo promedio: 1:45 minutos
+- ~318 propiedades listadas
+- Operaciones: 75 ventas casas, 127 departamentos, 93 terrenos
+- Zonas: Neuquén (73), Río Negro (1), Costa Atlántica (1)
 
 ## integrations
-- WhatsApp Business API (link directo a chat)
-- Google Maps embed para ubicación de propiedades y oficina
-- Google Analytics 4 (ya configurado, mantener el mismo tag)
+- WhatsApp Business (deep link) — botón flotante
+- Google Maps embed
+- Google Analytics 4 (mantener tag existente)
+- Instagram feed/link
 
-## deadline
-- Entrega de maquetas: semana 1
-- Revisión cliente: semana 2
-- Ajustes y producción: semana 3
-- Go-live: semana 4
+## output_format
+HTML + CSS + JS vanilla

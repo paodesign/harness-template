@@ -1,136 +1,19 @@
 {
-  "name": "Heurísticas de Usabilidad",
+  "name": "Heuristicas de Usabilidad",
   "version": "1.0",
-  "based_on": "Nielsen's 10 Usability Heuristics — adaptado para web",
-  "usage": "El Tester evalúa cada heurística con PASS, FAIL o N/A. Si falla, documenta el problema y la sugerencia.",
+  "based_on": "Nielsen 10 Heuristics — adaptado para web",
   "heuristics": [
-    {
-      "id": "H01",
-      "name": "Visibilidad del estado del sistema",
-      "description": "El usuario siempre sabe qué está pasando mediante feedback visual apropiado y en tiempo razonable.",
-      "checks": [
-        "Los formularios muestran estado de carga al enviar",
-        "Las acciones exitosas tienen confirmación visible",
-        "Los errores se comunican de forma clara e inmediata",
-        "La navegación indica la página/sección activa",
-        "Los enlaces visitados se distinguen de los no visitados (si aplica)",
-        "Los procesos largos tienen indicador de progreso"
-      ]
-    },
-    {
-      "id": "H02",
-      "name": "Correspondencia con el mundo real",
-      "description": "El sistema usa lenguaje, conceptos y convenciones familiares para el usuario.",
-      "checks": [
-        "El vocabulario es apropiado para la audiencia del cliente",
-        "Los íconos son reconocibles y convencionales",
-        "La información aparece en orden lógico y natural",
-        "Las metáforas visuales son coherentes (carrito = compra, sobre = email)",
-        "No hay jerga técnica innecesaria"
-      ]
-    },
-    {
-      "id": "H03",
-      "name": "Control y libertad del usuario",
-      "description": "El usuario puede deshacer acciones, volver atrás y salir de flujos no deseados.",
-      "checks": [
-        "Hay botón de 'volver' o breadcrumbs en flujos de múltiples pasos",
-        "Los modales se cierran con X, Escape y click fuera",
-        "Las acciones destructivas piden confirmación",
-        "El usuario puede cancelar procesos en curso",
-        "Los formularios multi-paso permiten volver a pasos anteriores"
-      ]
-    },
-    {
-      "id": "H04",
-      "name": "Consistencia y estándares",
-      "description": "Los mismos elementos se ven y comportan igual en todo el sitio.",
-      "checks": [
-        "Los botones primarios tienen el mismo estilo en todas las páginas",
-        "Los enlaces se identifican de forma consistente",
-        "La navegación mantiene la misma estructura en todas las páginas",
-        "Los mensajes de error siguen el mismo patrón",
-        "La terminología es consistente (no mezclar 'Guardar' y 'Salvar')",
-        "Los componentes reutilizados se ven iguales en distintos contextos"
-      ]
-    },
-    {
-      "id": "H05",
-      "name": "Prevención de errores",
-      "description": "El diseño previene errores antes de que ocurran.",
-      "checks": [
-        "Los campos con formato específico tienen máscara o ejemplo (teléfono, fecha)",
-        "Las acciones destructivas requieren confirmación",
-        "Los formularios validan en tiempo real (al perder foco)",
-        "Las opciones ambiguas tienen descripción o tooltip",
-        "Los campos deshabilitados se ven claramente como tales"
-      ]
-    },
-    {
-      "id": "H06",
-      "name": "Reconocimiento antes que recuerdo",
-      "description": "La información necesaria está visible o fácilmente recuperable.",
-      "checks": [
-        "Los labels de formulario son siempre visibles (no solo placeholder)",
-        "Las instrucciones complejas están accesibles sin cerrar el contexto",
-        "La navegación muestra la ubicación actual del usuario",
-        "Los tooltips aclaran funciones no evidentes",
-        "No se exige que el usuario recuerde información de páginas anteriores"
-      ]
-    },
-    {
-      "id": "H07",
-      "name": "Flexibilidad y eficiencia",
-      "description": "El sistema es eficiente tanto para usuarios novatos como experimentados.",
-      "checks": [
-        "Los CTAs principales están accesibles sin scroll excesivo",
-        "Los formularios largos agrupan campos relacionados",
-        "Los atajos de teclado están disponibles para acciones frecuentes (si aplica)",
-        "El contenido prioritario está above-the-fold"
-      ]
-    },
-    {
-      "id": "H08",
-      "name": "Diseño estético y minimalista",
-      "description": "Cada elemento visual tiene un propósito. No hay ruido visual.",
-      "checks": [
-        "No hay elementos decorativos que compitan con el contenido principal",
-        "La jerarquía visual guía la atención al objetivo de la página",
-        "No hay más de 3 niveles de importancia visual por sección",
-        "El espacio en blanco es suficiente para dar respiro al contenido",
-        "No hay información redundante o repetida"
-      ]
-    },
-    {
-      "id": "H09",
-      "name": "Recuperación ante errores",
-      "description": "Los mensajes de error son claros, específicos y sugieren una solución.",
-      "checks": [
-        "Los errores dicen QUÉ salió mal (no solo 'Error')",
-        "Los errores sugieren CÓMO corregirlo",
-        "Los errores de formulario se muestran junto al campo afectado",
-        "Los estados de error no destruyen los datos ingresados por el usuario",
-        "Las páginas 404 ofrecen alternativas (buscador, home, páginas populares)"
-      ]
-    },
-    {
-      "id": "H10",
-      "name": "Ayuda y documentación",
-      "description": "Si se necesita ayuda, es fácil de encontrar y orientada a la tarea.",
-      "checks": [
-        "Los formularios complejos tienen instrucciones claras",
-        "Los tooltips explican funciones no evidentes",
-        "La información de contacto es fácil de encontrar",
-        "Los FAQs o ayuda están accesibles desde el contexto relevante",
-        "Los estados vacíos incluyen instrucción de qué hacer"
-      ]
-    }
+    {"id":"H01","name":"Visibilidad del estado","checks":["Feedback en formularios","Confirmacion de acciones","Indicador de pagina activa","Progreso en procesos largos"]},
+    {"id":"H02","name":"Correspondencia con el mundo real","checks":["Vocabulario apropiado para la audiencia","Iconos reconocibles","Orden logico de informacion"]},
+    {"id":"H03","name":"Control y libertad","checks":["Boton volver o breadcrumbs","Modales se cierran con X/Escape/click fuera","Acciones destructivas piden confirmacion"]},
+    {"id":"H04","name":"Consistencia y estandares","checks":["Botones primarios iguales en todo el sitio","Terminologia consistente","Navegacion uniforme"]},
+    {"id":"H05","name":"Prevencion de errores","checks":["Campos con formato tienen mascara/ejemplo","Validacion en tiempo real","Opciones ambiguas tienen tooltip"]},
+    {"id":"H06","name":"Reconocimiento antes que recuerdo","checks":["Labels siempre visibles","Navegacion muestra ubicacion actual","No se exige recordar info de paginas anteriores"]},
+    {"id":"H07","name":"Flexibilidad y eficiencia","checks":["CTAs accesibles sin scroll excesivo","Formularios agrupan campos relacionados","Contenido prioritario above-the-fold"]},
+    {"id":"H08","name":"Diseno estetico y minimalista","checks":["Sin elementos decorativos que compitan con el contenido","Jerarquia visual clara","Espacio en blanco suficiente"]},
+    {"id":"H09","name":"Recuperacion ante errores","checks":["Errores dicen QUE salio mal","Sugieren COMO corregir","No destruyen datos ingresados","404 ofrece alternativas"]},
+    {"id":"H10","name":"Ayuda y documentacion","checks":["Formularios complejos tienen instrucciones","Tooltips en funciones no evidentes","Contacto facil de encontrar","Estados vacios con instruccion"]}
   ],
-  "scoring": {
-    "PASS": "La heurística se cumple satisfactoriamente",
-    "PARTIAL": "Se cumple parcialmente — documentar qué falta",
-    "FAIL": "No se cumple — documentar el problema y la sugerencia",
-    "N/A": "No aplica a este proyecto"
-  },
-  "pass_criteria": "Ninguna heurística en FAIL. Máximo 2 en PARTIAL."
+  "scoring": {"PASS":"Cumple","PARTIAL":"Parcial — documentar","FAIL":"No cumple — documentar y sugerir","N/A":"No aplica"},
+  "pass_criteria": "Ninguna en FAIL. Maximo 2 en PARTIAL."
 }

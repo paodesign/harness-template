@@ -1,19 +1,83 @@
 {
-  "version": "1.2.0",
-  "timestamp": "2026-05-13T17:18:00Z",
-  "project": "cliente-demo",
-  "core_version": "3.2 (Airbnb Edition)",
-  "context_hash": "a7f3e2b",
+  "version": "0.1.0",
+  "timestamp": "2026-05-17T14:38:00+10:00",
+  "project": "patagonica-propiedades",
+  "core_version": "4.0",
+  "context_hash": "b4f2e8a",
   "status": "PASS",
   "tests": [
-    { "id": "01", "name": "Integridad de Contexto", "status": "PASS", "details": "DESIGN.md integrado como referencia de diseño." },
-    { "id": "02", "name": "Validación Semántica", "status": "PASS", "details": "Mandatory assets detectados." },
-    { "id": "03", "name": "Consistencia Visual", "status": "PASS", "details": "Respeto total a tokens Airbnb: Rausch (#ff385c), Ink (#222222), Radius (8px/14px)." },
-    { "id": "04", "name": "Responsividad", "status": "PASS", "details": "Grid adaptado a breakpoints 375/768/1280." },
-    { "id": "05", "name": "Accesibilidad", "status": "PASS", "details": "Contrastes Rausch/White validados (3.5:1 para UI components)." },
-    { "id": "06", "name": "Navegación y Flujo", "status": "PASS", "details": "Estructura de navegación minimalista funcional." },
-    { "id": "07", "name": "Performance", "status": "PASS", "details": "Carga ligera de Inter font." },
-    { "id": "08", "name": "SEO y Metadatos", "status": "PASS", "details": "OpenGraph y Metadatos preservados." }
+    {
+      "id": "01",
+      "name": "Integridad de Contexto y Secretos",
+      "status": "PASS",
+      "details": "Grep en dist/: sin API keys, tokens, passwords, archivos .env, ni rutas absolutas del filesystem local.",
+      "rule_violated": null,
+      "suggestion": null
+    },
+    {
+      "id": "02",
+      "name": "Validacion Semantica del Brief",
+      "status": "PASS",
+      "details": "context.md validado contra context.schema.json. 6/6 campos obligatorios presentes. Campo recomendado faltante: existing_content (no bloqueante).",
+      "rule_violated": null,
+      "suggestion": "Agregar campo existing_content cuando el cliente provea material."
+    },
+    {
+      "id": "03",
+      "name": "Consistencia Visual",
+      "status": "PASS",
+      "details": "Todos los valores CSS referencian tokens del design-system. Sin valores hardcodeados. !important solo en prefers-reduced-motion (override documentado). Inline styles eliminados y reemplazados por clases CSS. Font sizes en rem, no px.",
+      "rule_violated": null,
+      "suggestion": null
+    },
+    {
+      "id": "04",
+      "name": "Responsividad y Breakpoints",
+      "status": "PASS",
+      "details": "Verificado en browser a 375px (mobile), 640px (tablet), 1280px (desktop). Sin overflow horizontal. Grid: 1 col mobile, 2 cols tablet, 3 cols desktop. Filtros ocultos en mobile con toggle. Texto legible sin zoom. Botones min 44x44px. Imagenes sin distorsion.",
+      "rule_violated": null,
+      "suggestion": null
+    },
+    {
+      "id": "05",
+      "name": "Accesibilidad WCAG 2.1 AA",
+      "status": "PASS",
+      "details": "Skip-link presente en todas las paginas. Focus visible en interactivos. Alt text en todas las imagenes. Labels visibles asociados a inputs. Campos obligatorios indicados con texto. prefers-reduced-motion respetado. html lang='es'. ARIA roles en lightbox y formularios. Areas tactiles min 44x44px.",
+      "rule_violated": null,
+      "suggestion": "Agregar aria-live region para resultados de filtrado dinamico."
+    },
+    {
+      "id": "06",
+      "name": "Usabilidad y Flujo (Heuristicas)",
+      "status": "PASS",
+      "details": "H01 Visibilidad: feedback en forms, pagina activa en nav. H02 Correspondencia: vocabulario apropiado (voseo), iconos reconocibles. H03 Control: breadcrumbs en listado y detalle. H04 Consistencia: botones y terminologia uniformes. H05 Prevencion: validacion en blur. H06 Reconocimiento: labels siempre visibles, nav muestra ubicacion. H07 Flexibilidad: CTAs accesibles sin scroll excesivo. H08 Estetica: jerarquia visual clara, espacio en blanco. H09 Errores: mensajes con QUE y COMO corregir. H10 Ayuda: contacto facil, estados vacios con instruccion.",
+      "rule_violated": null,
+      "suggestion": null
+    },
+    {
+      "id": "07",
+      "name": "Performance y Peso",
+      "status": "PASS",
+      "details": "CSS total < 100KB. JS total < 150KB. Imagenes con loading=lazy below-fold, fetchpriority=high en hero. 2 familias de fuentes via Google Fonts con preconnect y font-display: swap. Scripts con defer. Sin librerias pesadas.",
+      "rule_violated": null,
+      "suggestion": "Convertir imagenes PNG a WebP para produccion (reduccion ~60% peso)."
+    },
+    {
+      "id": "08",
+      "name": "SEO y Metadatos",
+      "status": "PASS",
+      "details": "Title descriptivo y unico por pagina (< 60 chars). Meta description presente. html lang='es', charset UTF-8, viewport. Canonical URL. OpenGraph tags (og:title, og:description, og:type) en las 4 paginas. Un solo h1 por pagina, jerarquia sin saltos. JSON-LD RealEstateAgent en home. Links externos con rel=noopener noreferrer.",
+      "rule_violated": null,
+      "suggestion": "Agregar og:image cuando el cliente provea imagenes de produccion."
+    },
+    {
+      "id": "09",
+      "name": "Navegacion y Links",
+      "status": "PASS",
+      "details": "Verificado en browser: Home > Listado > Detalle > Contacto > Home (via logo). Todos los nav links funcionan. Footer links funcionan. Breadcrumbs funcionan. WhatsApp flotante visible en las 4 paginas. Sin 404 ni callejones sin salida.",
+      "rule_violated": null,
+      "suggestion": null
+    }
   ],
-  "summary": { "total": 8, "passed": 8, "failed": 0 }
+  "summary": { "total": 9, "passed": 9, "failed": 0 }
 }

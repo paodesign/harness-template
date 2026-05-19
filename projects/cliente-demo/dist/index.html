@@ -1,153 +1,278 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Patagonia Propiedades | Inmobiliaria en Neuquén</title>
-    <meta name="description" content="Encontrá casas, departamentos y terrenos en Neuquén. Líderes en el mercado regional.">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Patagónica Propiedades — Inmobiliaria en Villa La Angostura</title>
+  <meta name="description" content="Encontrá tu próximo hogar en Villa La Angostura. Casas, departamentos, terrenos y locales en venta y alquiler en la Patagonia argentina.">
+  <link rel="canonical" href="https://patagonicapropiedades.com.ar/">
+  <meta property="og:title" content="Patagónica Propiedades — Inmobiliaria en Villa La Angostura">
+  <meta property="og:description" content="Casas, departamentos y terrenos en venta y alquiler en Villa La Angostura, Patagonia.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://patagonicapropiedades.com.ar/">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages/home.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "RealEstateAgent",
+    "name": "Patagónica Propiedades",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Cerro Bayo 69",
+      "addressLocality": "Villa La Angostura",
+      "addressRegion": "Neuquén",
+      "addressCountry": "AR"
+    },
+    "telephone": "+5492944231321",
+    "url": "https://patagonicapropiedades.com.ar"
+  }
+  </script>
 </head>
 <body>
-    <!-- Header -->
-    <header class="header">
-        <nav class="container nav">
-            <div class="logo">
-                <a href="index.html">
-                    <img src="https://placehold.co/180x40/FF385C/white?text=Patagonia" alt="Logo" style="height: 32px;">
-                </a>
-            </div>
-            
-            <ul class="nav-links">
-                <li><a href="index.html" style="border-bottom: 2px solid var(--color-ink); padding-bottom: 8px;">Inicio</a></li>
-                <li><a href="listado.html">Propiedades</a></li>
-                <li><a href="nosotros.html">Nosotros</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
-            </ul>
+  <a href="#main-content" class="skip-link">Ir al contenido principal</a>
 
-            <div class="account-menu" style="display: flex; align-items: center; gap: 12px; border: 1px solid var(--color-hairline); padding: 8px 12px; border-radius: 999px;">
-                <span style="font-size: 20px;">☰</span>
-                <div style="background: var(--color-muted); color: white; width: 30px; height: 30px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 12px;">👤</div>
-            </div>
-        </nav>
-    </header>
+  <!-- HEADER -->
+  <header class="header" id="site-header">
+    <div class="container header__inner">
+      <a href="index.html" class="header__logo" aria-label="Patagónica Propiedades — Inicio">
+        <svg class="header__logo-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="24" cy="24" r="23" stroke="currentColor" stroke-width="2"/>
+          <path d="M18 14h8a8 8 0 0 1 0 16h-4v6h-4V14z" fill="currentColor"/>
+        </svg>
+        <span class="header__logo-text">Patagónica<span class="header__logo-subtitle">Propiedades</span></span>
+      </a>
+      <button class="hamburger" id="hamburger-btn" aria-label="Abrir menú" aria-expanded="false" aria-controls="main-nav">
+        <span class="hamburger__line"></span>
+        <span class="hamburger__line"></span>
+        <span class="hamburger__line"></span>
+      </button>
+      <nav class="nav" id="main-nav" aria-label="Navegación principal">
+        <button class="nav__close" id="nav-close-btn" aria-label="Cerrar menú">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18M6 6l12 12"/></svg>
+        </button>
+        <ul class="nav__list">
+          <li><a href="index.html" class="nav__link is-active">Inicio</a></li>
+          <li><a href="listado.html" class="nav__link">Propiedades</a></li>
+          <li><a href="listado.html?op=venta" class="nav__link">Comprar</a></li>
+          <li><a href="listado.html?op=alquiler" class="nav__link">Alquilar</a></li>
+          <li><a href="contacto.html" class="nav__link">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <div class="nav-overlay" id="nav-overlay"></div>
 
-    <main>
-        <!-- Hero & Search Pill -->
-        <section class="hero">
-            <div class="container">
-                <h1 class="hero-heading">Inspiración para tu próximo hogar</h1>
-                
-                <div class="search-bar-pill">
-                    <div class="search-field-segment">
-                        <span class="search-field-label">Dónde</span>
-                        <span class="search-field-placeholder">Buscar destinos</span>
-                    </div>
-                    <div style="width: 1px; height: 32px; background: var(--color-hairline);"></div>
-                    <div class="search-field-segment">
-                        <span class="search-field-label">Tipo</span>
-                        <span class="search-field-placeholder">Casa, Depto...</span>
-                    </div>
-                    <div style="width: 1px; height: 32px; background: var(--color-hairline);"></div>
-                    <div class="search-field-segment">
-                        <span class="search-field-label">Quién</span>
-                        <span class="search-field-placeholder">¿Cuántos?</span>
-                    </div>
-                    <button class="search-orb">
-                        <span style="color: white; font-size: 20px;">🔍</span>
-                    </button>
-                </div>
-            </div>
-        </section>
-
-        <!-- Category Bar Simulation -->
-        <div class="container" style="display: flex; gap: 32px; overflow-x: auto; padding: 16px 0; border-bottom: 1px solid var(--color-hairline-soft); margin-bottom: 32px;">
-            <div style="text-align: center; opacity: 0.6; cursor: pointer;">
-                <div style="font-size: 24px;">🏡</div>
-                <span style="font-size: 12px; font-weight: 600;">Casas</span>
-            </div>
-            <div style="text-align: center; border-bottom: 2px solid black; padding-bottom: 8px; cursor: pointer;">
-                <div style="font-size: 24px;">🏙️</div>
-                <span style="font-size: 12px; font-weight: 600;">Deptos</span>
-            </div>
-            <div style="text-align: center; opacity: 0.6; cursor: pointer;">
-                <div style="font-size: 24px;">🏞️</div>
-                <span style="font-size: 12px; font-weight: 600;">Lotes</span>
-            </div>
+  <main id="main-content">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero__bg" id="hero-bg"></div>
+      <div class="hero__overlay"></div>
+      <div class="hero__content">
+        <span class="hero__tagline">Desde 2005 en Villa La Angostura</span>
+        <h1 class="hero__title">Encontrá tu próximo hogar en la Patagonia</h1>
+        <p class="hero__subtitle">Casas, departamentos y terrenos en el lugar más hermoso de la Argentina.</p>
+        <div class="hero__search">
+          <div class="form-field">
+            <label class="form-field__label" for="search-tipo">Tipo de propiedad</label>
+            <select class="input" id="search-tipo">
+              <option value="">Todas</option>
+              <option value="casa">Casa</option>
+              <option value="departamento">Departamento</option>
+              <option value="terreno">Terreno</option>
+              <option value="local">Local Comercial</option>
+            </select>
+          </div>
+          <div class="form-field">
+            <label class="form-field__label" for="search-operacion">Operación</label>
+            <select class="input" id="search-operacion">
+              <option value="">Todas</option>
+              <option value="venta">Venta</option>
+              <option value="alquiler">Alquiler</option>
+              <option value="temporal">Alquiler Temporal</option>
+            </select>
+          </div>
+          <a href="listado.html" class="btn btn-secondary" id="search-btn">Buscar propiedades</a>
         </div>
+      </div>
+      <svg class="hero__decoration" viewBox="0 0 1440 60" preserveAspectRatio="none"><path d="M0,60 C360,0 1080,0 1440,60 L1440,60 L0,60 Z"/></svg>
+    </section>
 
-        <!-- Property Grid -->
-        <section class="container" style="padding-bottom: 64px;">
-            <div class="property-grid">
-                <!-- Card 1 -->
-                <article class="property-card">
-                    <div class="property-image">
-                        <img src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?auto=format&fit=crop&q=80&w=600" alt="Casa Moderna">
-                        <div style="position: absolute; top: 12px; left: 12px; background: white; padding: 4px 10px; border-radius: 999px; font-size: 12px; font-weight: 600; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">Favorito entre huéspedes</div>
-                        <div style="position: absolute; top: 12px; right: 12px; color: white; font-size: 24px;">♡</div>
-                    </div>
-                    <div class="property-title">Neuquén, Argentina</div>
-                    <div class="property-location">A 12 kilómetros de distancia</div>
-                    <div class="property-location">12-17 de mayo</div>
-                    <div class="property-price">AR$ 45.000 <span style="font-weight: 400;">noche</span></div>
-                </article>
-
-                <!-- Card 2 -->
-                <article class="property-card">
-                    <div class="property-image">
-                        <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&q=80&w=600" alt="Departamento">
-                        <div style="position: absolute; top: 12px; right: 12px; color: white; font-size: 24px;">♡</div>
-                    </div>
-                    <div class="property-title">Plottier, Neuquén</div>
-                    <div class="property-location">A 25 kilómetros de distancia</div>
-                    <div class="property-location">20-25 de mayo</div>
-                    <div class="property-price">AR$ 32.000 <span style="font-weight: 400;">noche</span></div>
-                </article>
-
-                <!-- Card 3 -->
-                <article class="property-card">
-                    <div class="property-image">
-                        <img src="https://images.unsplash.com/photo-1512918766671-56001159af29?auto=format&fit=crop&q=80&w=600" alt="Terreno">
-                        <div style="position: absolute; top: 12px; right: 12px; color: white; font-size: 24px;">♡</div>
-                    </div>
-                    <div class="property-title">Confluencia, Neuquén</div>
-                    <div class="property-location">A 5 kilómetros de distancia</div>
-                    <div class="property-location">Recién agregado</div>
-                    <div class="property-price">AR$ 12.500.000 <span style="font-weight: 400;">total</span></div>
-                </article>
-            </div>
-        </section>
-    </main>
-
-    <footer class="container" style="border-top: 1px solid var(--color-hairline-soft); padding: 48px 0; color: var(--color-muted); font-size: 14px;">
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 32px;">
-            <div>
-                <h4 style="color: var(--color-ink); margin-bottom: 16px;">Asistencia</h4>
-                <p>Centro de ayuda</p>
-                <p>AirCover</p>
-            </div>
-            <div>
-                <h4 style="color: var(--color-ink); margin-bottom: 16px;">Modo anfitrión</h4>
-                <p>Poné tu casa en Patagonia</p>
-                <p>AirCover para anfitriones</p>
-            </div>
-            <div>
-                <h4 style="color: var(--color-ink); margin-bottom: 16px;">Airbnb</h4>
-                <p>Newsroom</p>
-                <p>Nuevas funciones</p>
-            </div>
+    <!-- FEATURED PROPERTIES -->
+    <section class="section featured" id="destacadas">
+      <div class="container">
+        <div class="section-header section-header--center">
+          <h2 class="section-header__title">Propiedades Destacadas</h2>
+          <p class="section-header__subtitle">Seleccionamos las mejores opciones para vos</p>
         </div>
-        <div style="margin-top: 48px; border-top: 1px solid var(--color-hairline-soft); padding-top: 24px; display: flex; justify-content: space-between;">
-            <span>© 2026 Patagonia Propiedades, Inc.</span>
-            <div style="display: flex; gap: 16px; font-weight: 600; color: var(--color-ink);">
-                <span>🌐 Español (AR)</span>
-                <span>$ ARS</span>
+        <div class="grid grid--3">
+          <article class="property-card" data-reveal>
+            <a href="detalle.html?id=1" class="property-card__image-wrapper">
+              <img src="assets/img/property-house-1.png" alt="Casa de montaña con vista a los cerros en Villa La Angostura" class="property-card__image" width="400" height="300" loading="lazy">
+              <span class="badge badge--venta property-card__badge">Venta</span>
+            </a>
+            <div class="property-card__body">
+              <span class="property-card__price">USD 290.000</span>
+              <h3 class="property-card__title"><a href="detalle.html?id=1">Casa 5 amb. con vista a los cerros</a></h3>
+              <span class="property-card__location">
+                <svg class="icon icon--sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                Villa La Angostura, Neuquén
+              </span>
+              <div class="property-card__specs">
+                <span class="property-card__spec"><strong>3</strong> Dorm.</span>
+                <span class="property-card__spec"><strong>2</strong> Baños</span>
+                <span class="property-card__spec"><strong>135</strong> m²</span>
+              </div>
             </div>
+          </article>
+          <article class="property-card" data-reveal>
+            <a href="detalle.html?id=2" class="property-card__image-wrapper">
+              <img src="assets/img/property-apartment-1.png" alt="Departamento moderno con vista al lago en Villa La Angostura" class="property-card__image" width="400" height="300" loading="lazy">
+              <span class="badge badge--venta property-card__badge">Venta</span>
+            </a>
+            <div class="property-card__body">
+              <span class="property-card__price">USD 235.000</span>
+              <h3 class="property-card__title"><a href="detalle.html?id=2">Departamento 3 amb. centro, equipado</a></h3>
+              <span class="property-card__location">
+                <svg class="icon icon--sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                Centro, Villa La Angostura
+              </span>
+              <div class="property-card__specs">
+                <span class="property-card__spec"><strong>3</strong> Dorm.</span>
+                <span class="property-card__spec"><strong>1</strong> Baño</span>
+                <span class="property-card__spec"><strong>124</strong> m²</span>
+              </div>
+            </div>
+          </article>
+          <article class="property-card" data-reveal>
+            <a href="detalle.html?id=3" class="property-card__image-wrapper">
+              <img src="assets/img/property-land-1.png" alt="Terreno con vista panorámica al lago Nahuel Huapi" class="property-card__image" width="400" height="300" loading="lazy">
+              <span class="badge badge--venta property-card__badge">Venta</span>
+            </a>
+            <div class="property-card__body">
+              <span class="property-card__price">USD 180.000</span>
+              <h3 class="property-card__title"><a href="detalle.html?id=3">Terreno 900 m² con vista al lago</a></h3>
+              <span class="property-card__location">
+                <svg class="icon icon--sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                Las Balsas, Villa La Angostura
+              </span>
+              <div class="property-card__specs">
+                <span class="property-card__spec"><strong>900</strong> m²</span>
+              </div>
+            </div>
+          </article>
         </div>
-    </footer>
+        <div class="featured__cta">
+          <a href="listado.html" class="btn btn-outline">Ver todas las propiedades</a>
+        </div>
+      </div>
+    </section>
 
-    <script src="main.js"></script>
+    <!-- TRUST SECTION -->
+    <section class="section trust" id="confianza">
+      <div class="container">
+        <div class="section-header section-header--center">
+          <h2 class="section-header__title">¿Por qué elegirnos?</h2>
+          <p class="section-header__subtitle">Más de 20 años ayudando a familias a encontrar su hogar en la Patagonia</p>
+        </div>
+        <div class="trust__grid">
+          <div class="stat-card" data-reveal>
+            <div class="stat-card__icon">🏡</div>
+            <div class="stat-card__number">+318</div>
+            <div class="stat-card__label">Propiedades disponibles</div>
+          </div>
+          <div class="stat-card" data-reveal>
+            <div class="stat-card__icon">📅</div>
+            <div class="stat-card__number">20+</div>
+            <div class="stat-card__label">Años de experiencia</div>
+          </div>
+          <div class="stat-card" data-reveal>
+            <div class="stat-card__icon">🤝</div>
+            <div class="stat-card__number">+500</div>
+            <div class="stat-card__label">Clientes satisfechos</div>
+          </div>
+          <div class="stat-card" data-reveal>
+            <div class="stat-card__icon">📍</div>
+            <div class="stat-card__number">3</div>
+            <div class="stat-card__label">Zonas de cobertura</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA BANNER -->
+    <section class="section cta-banner">
+      <div class="container">
+        <h2 class="cta-banner__title">¿Querés vender o alquilar tu propiedad?</h2>
+        <p class="cta-banner__text">Contactanos y te asesoramos sin compromiso. Tasaciones gratuitas.</p>
+        <div class="cta-banner__actions">
+          <a href="https://wa.me/5492944231321?text=Hola%2C%20quiero%20consultar%20por%20una%20tasaci%C3%B3n" class="btn btn-whatsapp" target="_blank" rel="noopener noreferrer">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.5.5 0 0 0 .612.616l4.524-1.478A11.94 11.94 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22a9.94 9.94 0 0 1-5.39-1.584l-.386-.232-2.688.879.893-2.63-.254-.403A9.935 9.935 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+            Escribinos por WhatsApp
+          </a>
+          <a href="contacto.html" class="btn btn-outline btn-outline--light">Contacto</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <div class="footer__logo">
+            <svg class="footer__logo-icon" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="23" stroke="currentColor" stroke-width="2"/><path d="M18 14h8a8 8 0 0 1 0 16h-4v6h-4V14z" fill="currentColor"/></svg>
+            <span class="footer__logo-text">Patagónica<span class="footer__logo-subtitle">Propiedades</span></span>
+          </div>
+          <p class="footer__description">Desde 2005, conectamos personas con su hogar ideal en Villa La Angostura y la Patagonia argentina.</p>
+        </div>
+        <div>
+          <h3 class="footer__heading">Contactanos</h3>
+          <ul class="footer__list">
+            <li class="footer__contact-item">📍 Cerro Bayo 69, Villa La Angostura</li>
+            <li class="footer__contact-item">📞 <a href="tel:+5492944231321">+54 9 294 423-1321</a> — Ventas</li>
+            <li class="footer__contact-item">📞 <a href="tel:+5492944728165">+54 9 294 472-8165</a> — Alquileres</li>
+            <li class="footer__contact-item">💬 <a href="https://wa.me/5492944231321" target="_blank" rel="noopener noreferrer">WhatsApp</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="footer__heading">Seguinos</h3>
+          <div class="footer__social">
+            <a href="https://www.instagram.com/patagonicapropiedades" target="_blank" rel="noopener noreferrer" class="footer__social-link" aria-label="Instagram de Patagónica Propiedades">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+            </a>
+          </div>
+        </div>
+        <div>
+          <h3 class="footer__heading">Accesos Rápidos</h3>
+          <ul class="footer__list">
+            <li><a href="listado.html">Propiedades</a></li>
+            <li><a href="listado.html?op=venta">Comprar</a></li>
+            <li><a href="listado.html?op=alquiler">Alquilar</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>© 2026 Patagónica Propiedades. Todos los derechos reservados.</p>
+        <p>Cerro Bayo 69, Villa La Angostura, Neuquén, Argentina</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp Float -->
+  <a href="https://wa.me/5492944231321?text=Hola%2C%20quiero%20consultar%20por%20una%20propiedad" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp">
+    <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.5.5 0 0 0 .612.616l4.524-1.478A11.94 11.94 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22a9.94 9.94 0 0 1-5.39-1.584l-.386-.232-2.688.879.893-2.63-.254-.403A9.935 9.935 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+  </a>
+
+  <script src="js/main.js" defer></script>
 </body>
 </html>

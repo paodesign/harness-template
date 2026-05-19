@@ -1,0 +1,136 @@
+/* ==========================================================================
+   LISTADO PAGE — Patagónica Propiedades
+   ========================================================================== */
+
+/* ---- Page header ---- */
+.listado-header {
+  background: var(--color-primary-light);
+  padding-block: var(--space-8);
+}
+
+.listado-header__title {
+  font-size: var(--heading-page);
+  font-weight: 700;
+  color: var(--color-gray-800);
+}
+
+.listado-header__count {
+  font-size: var(--text-sm);
+  color: var(--color-gray-500);
+  margin-top: var(--space-1);
+}
+
+/* ---- Filters sidebar ---- */
+.filters {
+  background: var(--color-white);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-gray-100);
+  padding: var(--space-6);
+}
+
+.filters__title {
+  font-size: var(--text-base);
+  font-weight: 600;
+  color: var(--color-gray-800);
+  margin-bottom: var(--space-4);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.filters__group {
+  padding-block: var(--space-4);
+  border-bottom: 1px solid var(--color-gray-100);
+}
+
+.filters__group:last-child {
+  border-bottom: none;
+}
+
+.filters__group-title {
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--color-gray-700);
+  margin-bottom: var(--space-3);
+}
+
+.filters__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.filters__clear {
+  font-size: var(--text-sm);
+  color: var(--color-error);
+  font-weight: 500;
+  cursor: pointer;
+  transition: opacity var(--transition-base);
+}
+
+.filters__clear:hover {
+  opacity: 0.8;
+}
+
+/* ---- Results ---- */
+.results__toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-6);
+  flex-wrap: wrap;
+  gap: var(--space-3);
+}
+
+.results__count {
+  font-size: var(--text-sm);
+  color: var(--color-gray-500);
+}
+
+.results__sort {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--text-sm);
+  color: var(--color-gray-600);
+}
+
+.results__sort select.input {
+  width: auto;
+  min-height: 36px;
+  font-size: var(--text-sm);
+  padding: var(--space-2) var(--space-8) var(--space-2) var(--space-3);
+}
+
+/* Mobile filter toggle */
+.filters-toggle {
+  display: flex;
+  margin-bottom: var(--space-4);
+}
+
+@media (min-width: 1024px) {
+  .filters-toggle {
+    display: none;
+  }
+}
+
+/* Mobile: filters as overlay */
+@media (max-width: 1023px) {
+  .filters {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: min(360px, 90vw);
+    height: 100vh;
+    z-index: var(--z-modal);
+    transform: translateX(-100%);
+    transition: transform var(--transition-slow);
+    overflow-y: auto;
+    border-radius: 0;
+    border: none;
+  }
+
+  .filters.is-open {
+    transform: translateX(0);
+  }
+}

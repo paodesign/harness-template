@@ -1,109 +1,231 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Casa Moderna en Barrio Jardín | Patagonia Propiedades</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Casa 5 amb. con vista a los cerros — Patagónica Propiedades</title>
+  <meta name="description" content="Casa de 135 m² en venta en Villa La Angostura. 3 dormitorios, 2 baños, vista a los cerros. USD 290.000.">
+  <link rel="canonical" href="https://patagonicapropiedades.com.ar/detalle.html?id=1">
+  <meta property="og:title" content="Casa 5 amb. con vista a los cerros — Patagónica Propiedades">
+  <meta property="og:description" content="Casa de 135 m² en venta en Villa La Angostura. 3 dormitorios, 2 baños. USD 290.000.">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages/detalle.css">
 </head>
 <body>
-    <!-- Header -->
-    <header class="header">
-        <nav class="container nav">
-            <div class="logo">
-                <a href="index.html">
-                    <img src="https://placehold.co/180x40/FF385C/white?text=Patagonia" alt="Logo" style="height: 32px;">
-                </a>
-            </div>
-            <div class="search-bar-pill" style="height: 48px; max-width: 400px; margin: 0;">
-                <span style="font-size: 14px; font-weight: 600; padding: 0 16px;">Iniciar búsqueda</span>
-                <button class="search-orb" style="width: 32px; height: 32px;">
-                    <span style="color: white; font-size: 14px;">🔍</span>
-                </button>
-            </div>
-            <div class="account-menu" style="display: flex; align-items: center; gap: 12px; border: 1px solid var(--color-hairline); padding: 8px 12px; border-radius: 999px;">
-                <span style="font-size: 20px;">☰</span>
-                <div style="background: var(--color-muted); color: white; width: 30px; height: 30px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 12px;">👤</div>
-            </div>
+  <a href="#main-content" class="skip-link">Ir al contenido principal</a>
+
+  <!-- HEADER -->
+  <header class="header" id="site-header">
+    <div class="container header__inner">
+      <a href="index.html" class="header__logo" aria-label="Patagónica Propiedades — Inicio">
+        <svg class="header__logo-icon" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="23" stroke="currentColor" stroke-width="2"/><path d="M18 14h8a8 8 0 0 1 0 16h-4v6h-4V14z" fill="currentColor"/></svg>
+        <span class="header__logo-text">Patagónica<span class="header__logo-subtitle">Propiedades</span></span>
+      </a>
+      <button class="hamburger" id="hamburger-btn" aria-label="Abrir menú" aria-expanded="false" aria-controls="main-nav">
+        <span class="hamburger__line"></span><span class="hamburger__line"></span><span class="hamburger__line"></span>
+      </button>
+      <nav class="nav" id="main-nav" aria-label="Navegación principal">
+        <button class="nav__close" id="nav-close-btn" aria-label="Cerrar menú">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18M6 6l12 12"/></svg>
+        </button>
+        <ul class="nav__list">
+          <li><a href="index.html" class="nav__link">Inicio</a></li>
+          <li><a href="listado.html" class="nav__link">Propiedades</a></li>
+          <li><a href="listado.html?op=venta" class="nav__link">Comprar</a></li>
+          <li><a href="listado.html?op=alquiler" class="nav__link">Alquilar</a></li>
+          <li><a href="contacto.html" class="nav__link">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <div class="nav-overlay" id="nav-overlay"></div>
+
+  <main id="main-content">
+    <div class="section">
+      <div class="container">
+        <!-- Breadcrumb -->
+        <nav class="breadcrumb" aria-label="Ubicación">
+          <a href="index.html">Inicio</a>
+          <span class="breadcrumb__separator" aria-hidden="true">›</span>
+          <a href="listado.html">Propiedades</a>
+          <span class="breadcrumb__separator" aria-hidden="true">›</span>
+          <span class="breadcrumb__current" aria-current="page">Casa 5 amb. con vista a los cerros</span>
         </nav>
-    </header>
 
-    <main class="container" style="padding-top: 24px;">
-        <h1 style="font-size: 26px; font-weight: 600; margin-bottom: 24px;">Casa Moderna en Barrio Jardín</h1>
-
-        <!-- Airbnb Mosaic Gallery -->
-        <div style="display: grid; grid-template-columns: 2fr 1fr 1fr; grid-template-rows: repeat(2, 200px); gap: 8px; border-radius: 12px; overflow: hidden; margin-bottom: 32px;">
-            <img src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?auto=format&fit=crop&q=80&w=1200" alt="Main" style="grid-column: 1 / 2; grid-row: 1 / 3; width: 100%; height: 100%; object-fit: cover;">
-            <img src="https://images.unsplash.com/photo-1512918766671-56001159af29?auto=format&fit=crop&q=80&w=600" alt="Photo 2" style="width: 100%; height: 100%; object-fit: cover;">
-            <img src="https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&fit=crop&q=80&w=600" alt="Photo 3" style="width: 100%; height: 100%; object-fit: cover;">
-            <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&q=80&w=600" alt="Photo 4" style="width: 100%; height: 100%; object-fit: cover;">
-            <img src="https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?auto=format&fit=crop&q=80&w=600" alt="Photo 5" style="width: 100%; height: 100%; object-fit: cover;">
+        <!-- Gallery -->
+        <div class="gallery">
+          <div class="gallery__main" aria-label="Ver imagen en pantalla completa">
+            <img id="gallery-main-img" src="assets/img/property-house-1.png" alt="Vista principal de la casa con vista a los cerros" width="800" height="500" fetchpriority="high">
+          </div>
+          <div class="gallery__thumbs" role="list" aria-label="Galería de fotos">
+            <button class="gallery__thumb is-active" data-full="assets/img/property-house-1.png" role="listitem" aria-label="Foto 1 de 4">
+              <img src="assets/img/property-house-1.png" alt="Vista exterior" width="80" height="60" loading="lazy">
+            </button>
+            <button class="gallery__thumb" data-full="assets/img/property-house-2.png" role="listitem" aria-label="Foto 2 de 4">
+              <img src="assets/img/property-house-2.png" alt="Vista del living" width="80" height="60" loading="lazy">
+            </button>
+            <button class="gallery__thumb" data-full="assets/img/property-apartment-1.png" role="listitem" aria-label="Foto 3 de 4">
+              <img src="assets/img/property-apartment-1.png" alt="Vista del comedor" width="80" height="60" loading="lazy">
+            </button>
+            <button class="gallery__thumb" data-full="assets/img/property-land-1.png" role="listitem" aria-label="Foto 4 de 4">
+              <img src="assets/img/property-land-1.png" alt="Vista del terreno" width="80" height="60" loading="lazy">
+            </button>
+          </div>
         </div>
 
-        <div style="display: grid; grid-template-columns: 1fr 380px; gap: 80px;">
-            <section>
-                <h2 style="font-size: 22px; font-weight: 600; border-bottom: 1px solid var(--color-hairline-soft); padding-bottom: 24px; margin-bottom: 24px;">Alojamiento entero en Neuquén Capital</h2>
-                
-                <div style="display: flex; gap: 32px; margin-bottom: 32px;">
-                    <div style="text-align: center;">
-                        <div style="font-size: 24px;">📐</div>
-                        <span style="font-size: 14px;">120m²</span>
-                    </div>
-                    <div style="text-align: center;">
-                        <div style="font-size: 24px;">🛏️</div>
-                        <span style="font-size: 14px;">2 Dorm.</span>
-                    </div>
-                    <div style="text-align: center;">
-                        <div style="font-size: 24px;">🚿</div>
-                        <span style="font-size: 14px;">2 Baños</span>
-                    </div>
-                </div>
-
-                <p style="color: var(--color-ink); line-height: 1.6; margin-bottom: 32px;">Excelente propiedad ubicada en el corazón de Barrio Jardín. Diseño moderno con amplios ventanales...</p>
-                
-                <div style="border-top: 1px solid var(--color-hairline-soft); padding-top: 32px;">
-                    <h3 style="font-size: 18px; font-weight: 600; margin-bottom: 16px;">Lo que ofrece este lugar</h3>
-                    <ul style="list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
-                        <li>🌿 Jardín parquizado</li>
-                        <li>🔥 Losa radiante</li>
-                        <li>🚗 Cochera doble</li>
-                        <li>🛡️ Seguridad 24hs</li>
-                    </ul>
-                </div>
-            </section>
-
-            <!-- Airbnb Reservation Card -->
-            <aside>
-                <div style="border: 1px solid var(--color-hairline); border-radius: 12px; padding: 24px; box-shadow: 0 6px 16px rgba(0,0,0,0.12); position: sticky; top: 104px;">
-                    <div style="font-size: 22px; font-weight: 700; margin-bottom: 24px;">AR$ 45.000 <span style="font-size: 16px; font-weight: 400; color: var(--color-muted);">noche</span></div>
-                    
-                    <div style="border: 1px solid var(--color-muted); border-radius: 8px; margin-bottom: 16px; overflow: hidden;">
-                        <div style="display: flex; border-bottom: 1px solid var(--color-muted);">
-                            <div style="flex: 1; padding: 10px; border-right: 1px solid var(--color-muted);">
-                                <div style="font-size: 10px; font-weight: 800;">LLEGADA</div>
-                                <div style="font-size: 14px;">12/5/2026</div>
-                            </div>
-                            <div style="flex: 1; padding: 10px;">
-                                <div style="font-size: 10px; font-weight: 800;">SALIDA</div>
-                                <div style="font-size: 14px;">17/5/2026</div>
-                            </div>
-                        </div>
-                        <div style="padding: 10px;">
-                            <div style="font-size: 10px; font-weight: 800;">HUÉSPEDES</div>
-                            <div style="font-size: 14px;">2 huéspedes</div>
-                        </div>
-                    </div>
-
-                    <button class="btn btn-primary" style="width: 100%; border-radius: 8px; font-size: 16px; margin-bottom: 16px;">Reservar</button>
-                    <p style="text-align: center; font-size: 14px; color: var(--color-muted);">No se te cobrará nada ahora</p>
-                </div>
-            </aside>
+        <!-- Lightbox -->
+        <div class="lightbox" id="lightbox" role="dialog" aria-label="Galería de fotos" aria-modal="true">
+          <img class="lightbox__image" src="" alt="">
+          <button class="lightbox__close" aria-label="Cerrar galería">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18M6 6l12 12"/></svg>
+          </button>
+          <button class="lightbox__prev" aria-label="Foto anterior">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+          </button>
+          <button class="lightbox__next" aria-label="Foto siguiente">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+          </button>
+          <span class="lightbox__counter">1 / 4</span>
         </div>
-    </main>
 
-    <script src="main.js"></script>
+        <!-- Detail Layout -->
+        <div class="detail__layout detail__layout--spaced">
+          <div class="detail__main">
+            <div class="detail__header">
+              <span class="badge badge--venta">Venta</span>
+              <h1 class="detail__title">Casa en venta. 5 ambientes. Todos los servicios. Vista a los cerros.</h1>
+              <span class="detail__price">USD 290.000</span>
+              <span class="detail__location">
+                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                Villa La Angostura, Neuquén
+              </span>
+            </div>
+
+            <!-- Specs -->
+            <div class="detail__specs">
+              <div class="spec-item"><span class="spec-item__value">3</span><span class="spec-item__label">Dormitorios</span></div>
+              <div class="spec-item"><span class="spec-item__value">2</span><span class="spec-item__label">Baños</span></div>
+              <div class="spec-item"><span class="spec-item__value">135</span><span class="spec-item__label">m² cubiertos</span></div>
+              <div class="spec-item"><span class="spec-item__value">900</span><span class="spec-item__label">m² terreno</span></div>
+            </div>
+
+            <!-- Description -->
+            <div class="detail__description">
+              <h3>Descripción</h3>
+              <p>Excepcional casa de 135 m² cubiertos sobre lote de 900 m², parquizado y cercado. Ubicada a 700 m del centro de Villa La Angostura. Excelente luz natural durante todo el día.</p>
+              <p>La propiedad cuenta con living-comedor con hogar a leña, cocina equipada, tres dormitorios amplios (uno en suite), y dos baños completos. Garage cubierto para dos vehículos y amplio jardín con quincho.</p>
+              <p>Vista panorámica a los cerros, orientación norte. Todos los servicios: agua, luz, gas natural, internet fibra óptica. Calefacción por losa radiante.</p>
+            </div>
+
+            <!-- Amenities -->
+            <div>
+              <h3 class="detail__section-title">Características</h3>
+              <div class="amenities">
+                <div class="amenity-item"><span class="amenity-item__icon">✓</span> Hogar a leña</div>
+                <div class="amenity-item"><span class="amenity-item__icon">✓</span> Losa radiante</div>
+                <div class="amenity-item"><span class="amenity-item__icon">✓</span> Gas natural</div>
+                <div class="amenity-item"><span class="amenity-item__icon">✓</span> Fibra óptica</div>
+                <div class="amenity-item"><span class="amenity-item__icon">✓</span> Garage doble</div>
+                <div class="amenity-item"><span class="amenity-item__icon">✓</span> Quincho</div>
+                <div class="amenity-item"><span class="amenity-item__icon">✓</span> Jardín parquizado</div>
+                <div class="amenity-item"><span class="amenity-item__icon">✓</span> Vista a los cerros</div>
+                <div class="amenity-item"><span class="amenity-item__icon">✓</span> Cercado perimetral</div>
+              </div>
+            </div>
+
+            <!-- Map -->
+            <div>
+              <h3 class="detail__section-title">Ubicación</h3>
+              <div class="detail__map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d46178.08!2d-71.65!3d-40.76!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9610bf2b!2sVilla+La+Angostura!5e0!3m2!1ses!2sar" allowfullscreen loading="lazy" title="Ubicación de la propiedad en Villa La Angostura"></iframe>
+              </div>
+            </div>
+          </div>
+
+          <!-- SIDEBAR -->
+          <aside class="detail__sidebar">
+            <div class="sidebar-card">
+              <h2 class="sidebar-card__title">Consultá por esta propiedad</h2>
+              <form data-validate id="contact-form-detail">
+                <div class="form-field">
+                  <label class="form-field__label" for="detail-nombre">Nombre completo <span class="required" aria-label="obligatorio">*</span></label>
+                  <input type="text" class="input" id="detail-nombre" name="nombre" data-required autocomplete="name">
+                  <span class="form-field__error" role="alert"></span>
+                </div>
+                <div class="form-field">
+                  <label class="form-field__label" for="detail-telefono">Teléfono <span class="required" aria-label="obligatorio">*</span></label>
+                  <input type="tel" class="input" id="detail-telefono" name="telefono" data-required data-type="phone" autocomplete="tel">
+                  <span class="form-field__error" role="alert"></span>
+                </div>
+                <div class="form-field">
+                  <label class="form-field__label" for="detail-email">Email</label>
+                  <input type="email" class="input" id="detail-email" name="email" data-type="email" autocomplete="email">
+                  <span class="form-field__error" role="alert"></span>
+                </div>
+                <div class="form-field">
+                  <label class="form-field__label" for="detail-mensaje">Mensaje</label>
+                  <textarea class="input" id="detail-mensaje" name="mensaje" rows="4">Hola, quiero consultar por la propiedad "Casa 5 amb. con vista a los cerros".</textarea>
+                </div>
+                <button type="submit" class="btn btn-primary btn--full">Enviar consulta</button>
+              </form>
+              <div class="sidebar-card__whatsapp">
+                <a href="https://wa.me/5492944231321?text=Hola%2C%20quiero%20consultar%20por%20la%20Casa%205%20amb.%20con%20vista%20a%20los%20cerros%20(USD%20290.000)" class="btn btn-whatsapp btn--full" target="_blank" rel="noopener noreferrer">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.5.5 0 0 0 .612.616l4.524-1.478A11.94 11.94 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.94 0-3.75-.56-5.39-1.584l-.386-.232-2.688.879.893-2.63-.254-.403A9.935 9.935 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+                  WhatsApp directo
+                </a>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <div class="footer__logo">
+            <svg class="footer__logo-icon" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="23" stroke="currentColor" stroke-width="2"/><path d="M18 14h8a8 8 0 0 1 0 16h-4v6h-4V14z" fill="currentColor"/></svg>
+            <span class="footer__logo-text">Patagónica<span class="footer__logo-subtitle">Propiedades</span></span>
+          </div>
+          <p class="footer__description">Desde 2005, conectamos personas con su hogar ideal en Villa La Angostura.</p>
+        </div>
+        <div>
+          <h3 class="footer__heading">Contactanos</h3>
+          <ul class="footer__list">
+            <li class="footer__contact-item">📍 Cerro Bayo 69, Villa La Angostura</li>
+            <li class="footer__contact-item">📞 <a href="tel:+5492944231321">+54 9 294 423-1321</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="footer__heading">Accesos Rápidos</h3>
+          <ul class="footer__list">
+            <li><a href="listado.html">Propiedades</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>© 2026 Patagónica Propiedades. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/5492944231321" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp">
+    <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.5.5 0 0 0 .612.616l4.524-1.478A11.94 11.94 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.94 0-3.75-.56-5.39-1.584l-.386-.232-2.688.879.893-2.63-.254-.403A9.935 9.935 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+  </a>
+
+  <script src="js/main.js" defer></script>
+  <script src="js/gallery.js" defer></script>
+  <script src="js/form-validation.js" defer></script>
 </body>
 </html>

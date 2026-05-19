@@ -1,78 +1,199 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Propiedades en Neuquén | Patagonia Propiedades</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Propiedades en Villa La Angostura — Patagónica Propiedades</title>
+  <meta name="description" content="Explorá casas, departamentos y terrenos en venta y alquiler en Villa La Angostura. Filtrá por tipo, zona y precio.">
+  <link rel="canonical" href="https://patagonicapropiedades.com.ar/listado.html">
+  <meta property="og:title" content="Propiedades en Villa La Angostura — Patagónica Propiedades">
+  <meta property="og:description" content="Casas, departamentos y terrenos disponibles en la Patagonia argentina.">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages/listado.css">
 </head>
 <body>
-    <!-- Header -->
-    <header class="header">
-        <nav class="container nav">
-            <div class="logo">
-                <a href="index.html">
-                    <img src="https://placehold.co/180x40/FF385C/white?text=Patagonia" alt="Logo" style="height: 32px;">
-                </a>
-            </div>
-            
-            <div class="search-bar-pill" style="height: 48px; max-width: 400px; margin: 0;">
-                <div class="search-field-segment" style="padding: 0 16px;">
-                    <span style="font-size: 14px; font-weight: 600;">Cualquier lugar</span>
-                </div>
-                <div style="width: 1px; height: 24px; background: var(--color-hairline);"></div>
-                <div class="search-field-segment" style="padding: 0 16px;">
-                    <span style="font-size: 14px; font-weight: 600;">Cualquier semana</span>
-                </div>
-                <button class="search-orb" style="width: 32px; height: 32px;">
-                    <span style="color: white; font-size: 14px;">🔍</span>
-                </button>
-            </div>
+  <a href="#main-content" class="skip-link">Ir al contenido principal</a>
 
-            <div class="account-menu" style="display: flex; align-items: center; gap: 12px; border: 1px solid var(--color-hairline); padding: 8px 12px; border-radius: 999px;">
-                <span style="font-size: 20px;">☰</span>
-                <div style="background: var(--color-muted); color: white; width: 30px; height: 30px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 12px;">👤</div>
-            </div>
+  <!-- HEADER -->
+  <header class="header" id="site-header">
+    <div class="container header__inner">
+      <a href="index.html" class="header__logo" aria-label="Patagónica Propiedades — Inicio">
+        <svg class="header__logo-icon" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="23" stroke="currentColor" stroke-width="2"/><path d="M18 14h8a8 8 0 0 1 0 16h-4v6h-4V14z" fill="currentColor"/></svg>
+        <span class="header__logo-text">Patagónica<span class="header__logo-subtitle">Propiedades</span></span>
+      </a>
+      <button class="hamburger" id="hamburger-btn" aria-label="Abrir menú" aria-expanded="false" aria-controls="main-nav">
+        <span class="hamburger__line"></span><span class="hamburger__line"></span><span class="hamburger__line"></span>
+      </button>
+      <nav class="nav" id="main-nav" aria-label="Navegación principal">
+        <button class="nav__close" id="nav-close-btn" aria-label="Cerrar menú">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18M6 6l12 12"/></svg>
+        </button>
+        <ul class="nav__list">
+          <li><a href="index.html" class="nav__link">Inicio</a></li>
+          <li><a href="listado.html" class="nav__link is-active">Propiedades</a></li>
+          <li><a href="listado.html?op=venta" class="nav__link">Comprar</a></li>
+          <li><a href="listado.html?op=alquiler" class="nav__link">Alquilar</a></li>
+          <li><a href="contacto.html" class="nav__link">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <div class="nav-overlay" id="nav-overlay"></div>
+
+  <main id="main-content">
+    <!-- Page Header -->
+    <div class="listado-header">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Ubicación">
+          <a href="index.html">Inicio</a>
+          <span class="breadcrumb__separator" aria-hidden="true">›</span>
+          <span class="breadcrumb__current" aria-current="page">Propiedades</span>
         </nav>
-    </header>
+        <h1 class="listado-header__title">Propiedades en Villa La Angostura</h1>
+        <p class="listado-header__count" id="results-count">Mostrando 8 propiedades</p>
+      </div>
+    </div>
 
-    <main class="container" style="padding-top: 32px;">
-        <div class="listing-header" style="border-bottom: 1px solid var(--color-hairline-soft); padding-bottom: 16px; margin-bottom: 32px; display: flex; justify-content: space-between; align-items: center;">
-            <h1 style="font-size: 24px; font-weight: 600;">Propiedades en Neuquén</h1>
-            <button class="btn" style="border: 1px solid var(--color-hairline); background: white; padding: 8px 16px; font-size: 12px; display: flex; align-items: center; gap: 8px;">
-                <span>⚙️</span> Filtros
-            </button>
+    <div class="section">
+      <div class="container">
+        <!-- Mobile filter toggle -->
+        <div class="filters-toggle">
+          <button class="btn btn-outline btn--full" id="filters-toggle-btn">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 21v-7M4 10V3M12 21v-9M12 8V3M20 21v-5M20 12V3M1 14h6M9 8h6M17 16h6"/></svg>
+            Filtrar propiedades
+          </button>
         </div>
+        <div class="nav-overlay" id="filters-overlay"></div>
 
-        <div class="property-grid" style="margin-top: 0;">
-            <!-- Property cards with Airbnb style -->
-            <article class="property-card" onclick="location.href='detalle.html'">
-                <div class="property-image">
-                    <img src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?auto=format&fit=crop&q=80&w=600" alt="Casa">
-                    <div style="position: absolute; top: 12px; right: 12px; color: white; font-size: 24px;">♡</div>
+        <div class="layout-sidebar">
+          <!-- FILTERS -->
+          <aside class="filters" id="filters-panel" aria-label="Filtros de búsqueda">
+            <div class="filters__title">
+              Filtros
+              <button class="filters__clear" id="clear-filters">Limpiar</button>
+            </div>
+            <div class="filters__group">
+              <h3 class="filters__group-title">Tipo de operación</h3>
+              <div class="filters__tags">
+                <button class="tag" data-filter="operacion" data-value="Venta">Venta</button>
+                <button class="tag" data-filter="operacion" data-value="Alquiler">Alquiler</button>
+                <button class="tag" data-filter="operacion" data-value="Temporal">Temporal</button>
+              </div>
+            </div>
+            <div class="filters__group">
+              <h3 class="filters__group-title">Tipo de propiedad</h3>
+              <div class="filters__tags">
+                <button class="tag" data-filter="tipo" data-value="Casa">Casa</button>
+                <button class="tag" data-filter="tipo" data-value="Departamento">Departamento</button>
+                <button class="tag" data-filter="tipo" data-value="Terreno">Terreno</button>
+                <button class="tag" data-filter="tipo" data-value="Local">Local</button>
+              </div>
+            </div>
+            <div class="filters__group">
+              <h3 class="filters__group-title">Dormitorios</h3>
+              <div class="filters__tags">
+                <button class="tag" data-filter="dormitorios" data-value="1">1+</button>
+                <button class="tag" data-filter="dormitorios" data-value="2">2+</button>
+                <button class="tag" data-filter="dormitorios" data-value="3">3+</button>
+                <button class="tag" data-filter="dormitorios" data-value="4">4+</button>
+              </div>
+            </div>
+            <div class="filters__group">
+              <h3 class="filters__group-title">Rango de precio (USD)</h3>
+              <div class="flex flex--gap-2">
+                <div class="form-field form-field--flex">
+                  <label class="form-field__label" for="filter-precio-min">Desde</label>
+                  <input type="number" class="input" id="filter-precio-min" placeholder="0" min="0" step="10000">
                 </div>
-                <div class="property-title">Neuquén, Zona Este</div>
-                <div class="property-location">Casa de 4 ambientes</div>
-                <div class="property-location">AR$ 62.000.000</div>
-            </article>
-
-            <article class="property-card" onclick="location.href='detalle.html'">
-                <div class="property-image">
-                    <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&q=80&w=600" alt="Depto">
-                    <div style="position: absolute; top: 12px; right: 12px; color: white; font-size: 24px;">♡</div>
+                <div class="form-field" style="flex:1">
+                  <label class="form-field__label" for="filter-precio-max">Hasta</label>
+                  <input type="number" class="input" id="filter-precio-max" placeholder="Sin límite" min="0" step="10000">
                 </div>
-                <div class="property-title">Neuquén, Centro</div>
-                <div class="property-location">Dúplex moderno</div>
-                <div class="property-location">AR$ 250.000 <span style="font-weight: 400;">noche</span></div>
-            </article>
+              </div>
+            </div>
+          </aside>
 
-            <!-- More cards... -->
+          <!-- RESULTS -->
+          <div>
+            <div class="results__toolbar">
+              <span id="results-count-toolbar" class="results__count"></span>
+              <div class="results__sort">
+                <label for="sort-select" class="sr-only">Ordenar por</label>
+                <select class="input" id="sort-select">
+                  <option value="">Más recientes</option>
+                  <option value="precio-asc">Precio: menor a mayor</option>
+                  <option value="precio-desc">Precio: mayor a menor</option>
+                  <option value="superficie">Mayor superficie</option>
+                </select>
+              </div>
+            </div>
+            <div class="grid grid--3" id="properties-grid"></div>
+          </div>
         </div>
-    </main>
+      </div>
+    </div>
+  </main>
 
-    <script src="main.js"></script>
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <div class="footer__logo">
+            <svg class="footer__logo-icon" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="23" stroke="currentColor" stroke-width="2"/><path d="M18 14h8a8 8 0 0 1 0 16h-4v6h-4V14z" fill="currentColor"/></svg>
+            <span class="footer__logo-text">Patagónica<span class="footer__logo-subtitle">Propiedades</span></span>
+          </div>
+          <p class="footer__description">Desde 2005, conectamos personas con su hogar ideal en Villa La Angostura.</p>
+        </div>
+        <div>
+          <h3 class="footer__heading">Contactanos</h3>
+          <ul class="footer__list">
+            <li class="footer__contact-item">📍 Cerro Bayo 69, Villa La Angostura</li>
+            <li class="footer__contact-item">📞 <a href="tel:+5492944231321">+54 9 294 423-1321</a> — Ventas</li>
+            <li class="footer__contact-item">📞 <a href="tel:+5492944728165">+54 9 294 472-8165</a> — Alquileres</li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="footer__heading">Accesos Rápidos</h3>
+          <ul class="footer__list">
+            <li><a href="listado.html">Propiedades</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>© 2026 Patagónica Propiedades. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp Float -->
+  <a href="https://wa.me/5492944231321?text=Hola%2C%20quiero%20consultar%20por%20una%20propiedad" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp">
+    <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.5.5 0 0 0 .612.616l4.524-1.478A11.94 11.94 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22a9.94 9.94 0 0 1-5.39-1.584l-.386-.232-2.688.879.893-2.63-.254-.403A9.935 9.935 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+  </a>
+
+  <!-- Property Data (JSON for client-side filtering) -->
+  <script type="application/json" id="properties-data">
+  [
+    {"id":1,"titulo":"Casa 5 amb. con vista a los cerros","precio":290000,"operacion":"Venta","tipo":"Casa","ubicacion":"Villa La Angostura, Neuquén","zona":"Neuquén","dormitorios":3,"banos":2,"superficie":135,"imagen":"assets/img/property-house-1.png"},
+    {"id":2,"titulo":"Departamento 3 amb. centro, equipado","precio":235000,"operacion":"Venta","tipo":"Departamento","ubicacion":"Centro, Villa La Angostura","zona":"Neuquén","dormitorios":3,"banos":1,"superficie":124,"imagen":"assets/img/property-apartment-1.png"},
+    {"id":3,"titulo":"Terreno 900 m² con vista al lago","precio":180000,"operacion":"Venta","tipo":"Terreno","ubicacion":"Las Balsas, Villa La Angostura","zona":"Neuquén","dormitorios":0,"banos":0,"superficie":900,"imagen":"assets/img/property-land-1.png"},
+    {"id":4,"titulo":"Cabaña alpina 4 amb. con chimenea","precio":360000,"operacion":"Venta","tipo":"Casa","ubicacion":"Correntoso, Villa La Angostura","zona":"Neuquén","dormitorios":3,"banos":2,"superficie":180,"imagen":"assets/img/property-house-2.png"},
+    {"id":5,"titulo":"Monoambiente equipado, ideal renta","precio":1200,"operacion":"Alquiler","tipo":"Departamento","ubicacion":"Centro, Villa La Angostura","zona":"Neuquén","dormitorios":1,"banos":1,"superficie":45,"imagen":"assets/img/property-apartment-2.png"},
+    {"id":6,"titulo":"Casa contemporánea frente al lago","precio":520000,"operacion":"Venta","tipo":"Casa","ubicacion":"Bahía Manzano, Villa La Angostura","zona":"Neuquén","dormitorios":4,"banos":3,"superficie":280,"imagen":"assets/img/property-house-3.png"},
+    {"id":7,"titulo":"Local comercial en av. principal","precio":2500,"operacion":"Alquiler","tipo":"Local","ubicacion":"Av. Arrayanes, Villa La Angostura","zona":"Neuquén","dormitorios":0,"banos":1,"superficie":65,"imagen":"assets/img/property-commercial-1.png"},
+    {"id":8,"titulo":"Lote boscoso 1200 m², servicios","precio":95000,"operacion":"Venta","tipo":"Terreno","ubicacion":"Puerto Manzano, Villa La Angostura","zona":"Neuquén","dormitorios":0,"banos":0,"superficie":1200,"imagen":"assets/img/property-land-2.png"}
+  ]
+  </script>
+
+  <script src="js/main.js" defer></script>
+  <script src="js/filters.js" defer></script>
 </body>
 </html>

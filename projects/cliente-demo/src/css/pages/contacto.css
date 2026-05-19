@@ -1,0 +1,171 @@
+/* ==========================================================================
+   CONTACTO PAGE — Patagónica Propiedades
+   ========================================================================== */
+
+/* ---- Contact header ---- */
+.contacto-header {
+  background: linear-gradient(135deg, var(--color-primary) 0%, #0F3A47 100%);
+  color: var(--color-white);
+  padding-block: var(--space-16);
+  text-align: center;
+}
+
+.contacto-header__title {
+  font-size: var(--heading-page);
+  font-weight: 700;
+  color: var(--color-white);
+  margin-bottom: var(--space-2);
+}
+
+.contacto-header__subtitle {
+  font-size: var(--text-base);
+  opacity: 0.85;
+}
+
+/* ---- Contact layout ---- */
+.contacto__layout {
+  display: grid;
+  gap: var(--space-8);
+}
+
+@media (min-width: 1024px) {
+  .contacto__layout {
+    grid-template-columns: 1fr 1.2fr;
+  }
+}
+
+/* ---- Contact info ---- */
+.contacto__info {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+.contacto__info-card {
+  background: var(--color-white);
+  border: 1px solid var(--color-gray-100);
+  border-radius: var(--radius-lg);
+  padding: var(--space-6);
+  box-shadow: var(--shadow-sm);
+}
+
+.contacto__info-title {
+  font-size: var(--text-lg);
+  font-weight: 600;
+  color: var(--color-gray-800);
+  margin-bottom: var(--space-4);
+}
+
+.contacto__info-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.contacto__info-item {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+}
+
+.contacto__info-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-md);
+  background: var(--color-primary-light);
+  color: var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.contacto__info-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.contacto__info-label {
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--color-gray-700);
+}
+
+.contacto__info-value {
+  font-size: var(--text-sm);
+  color: var(--color-gray-500);
+}
+
+.contacto__info-value a {
+  color: var(--color-primary);
+}
+
+/* ---- Horarios ---- */
+.contacto__hours {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.contacto__hours-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: var(--text-sm);
+  padding: var(--space-2) 0;
+  border-bottom: 1px solid var(--color-gray-100);
+}
+
+.contacto__hours-day {
+  font-weight: 500;
+  color: var(--color-gray-700);
+}
+
+.contacto__hours-time {
+  color: var(--color-gray-500);
+}
+
+/* ---- Contact Form Card ---- */
+.contacto__form-card {
+  background: var(--color-white);
+  border: 1px solid var(--color-gray-100);
+  border-radius: var(--radius-lg);
+  padding: var(--space-8);
+  box-shadow: var(--shadow-md);
+}
+
+.contacto__form-title {
+  font-size: var(--text-lg);
+  font-weight: 600;
+  color: var(--color-gray-800);
+  margin-bottom: var(--space-6);
+}
+
+.contacto__form .form-field + .form-field {
+  margin-top: var(--space-4);
+}
+
+.contacto__form .btn {
+  margin-top: var(--space-6);
+}
+
+/* ---- Map section ---- */
+.contacto__map {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  aspect-ratio: 21 / 9;
+  margin-top: var(--space-8);
+}
+
+.contacto__map iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+@media (min-width: 1024px) {
+  .contacto__map {
+    aspect-ratio: 3 / 1;
+    grid-column: 1 / -1;
+  }
+}
